@@ -1,7 +1,7 @@
 require 'rubygems'
+require 'yaml'
 require 'nokogiri'
 require 'open-uri'
-require 'yaml'
 require 'places/business'
 
 ENV['http_proxy'] = "http://laocache:8080/"
@@ -12,13 +12,11 @@ class BusinessPopulator2
     
     # download businesses_by_category_pages
     # download business_pages
-    # download business_images_pages    
+    # download business_images_pages
   
   def self.download_top40_businesses_by_category(category)
     file = File.join('..', 'pages', 'top40', category + '.html')
-    if File.exists?(file) 
-      html = File.read(file)
-    else
+    unless File.exists?(file)
       url = BUSINESS_CATEGORY_URL.sub(/@@@/, category)
       html = open(url).read
       File.open(file, "w") { |f| f.print html }
@@ -26,12 +24,12 @@ class BusinessPopulator2
   end
   
   def self.download_all_top40_businesses
-    categories = Yaml::load(File.open(File.join('..', '..', 'config', 'categories.yml')))
+    categories = YAML::load_file(File.join('..', 'config', 'categories.yml'))
     puts categories
-    #categories.each do |cat| 
-     # sleep 1
-      #download_top40_businesses_by_category(category)
-    #end
+    categories.each do |cat| 
+      sleep 1
+      download_top40_businesses_by_category(cat)
+    end
   end
 
 end
