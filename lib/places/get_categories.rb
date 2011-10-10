@@ -6,7 +6,7 @@ require 'nokogiri'
 ENV['http_proxy'] = "http://laocache:8080/"
 
 def categories
-  file = File.join('..', '..', 'config', 'categories.yml')
+  file = File.join(PLACES_ROOT, 'config', 'categories.yml')
   html = open("http://www.yelp.com/c/la/restaurants").read
   doc = Nokogiri::HTML(html)
   categories = []
