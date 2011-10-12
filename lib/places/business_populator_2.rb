@@ -11,6 +11,18 @@ class BusinessPopulator2
   BUSINESS_CATEGORY_URL = "http://www.yelp.com/search?find_loc=Los+Angeles%2C+CA&cflt=@@@#rpp=40"
   COOKIE = "searchPrefs=%7B%22seen_pop%22%3Afalse%2C%22seen_crop_pop%22%3Afalse%2C%22prevent_scroll%22%3Afalse%2C%22maptastic_mode%22%3Afalse%2C%22mapsize%22%3A%22small%22%2C%22rpp%22%3A40%7D" 
   
+  def self.categories
+    file = File.join(PLACES_ROOT, 'config', 'categories.yml')
+    html = open("http://www.yelp.com/c/la/restaurants").read
+    doc = Nokogiri::HTML(html)
+    categories = []
+    doc.css('.browse-by-subject + .browse-by-subject .content li a').each { |node| 
+      puts node['href']
+      categories << node['href'].split('/').last.strip
+    }
+    File.open(file, "w") { |out| YAML::dump(categories, out) }
+  end
+
   def self.top40_by_category(category)
     file = File.join(PLACES_ROOT, 'pages', 'top40', category + '.html')
     unless File.exists?(file)

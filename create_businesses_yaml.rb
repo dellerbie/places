@@ -6,5 +6,6 @@ require 'places'
 PLACES_ROOT = File.expand_path(File.dirname(__FILE__))
 ENV['http_proxy'] = "http://laocache:8080/"
 
+BusinessPopulator2.categories
 businesses = BusinessPopulator2.create_businesses
 

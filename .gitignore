@@ -1,5 +1,8 @@
 *.swp
 *~
+*#
+.#*
 pages/top40/
 pages/businesses/
 pages/images/
+images/
