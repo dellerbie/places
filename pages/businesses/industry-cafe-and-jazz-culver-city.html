@@ -9,6 +9,10 @@
 		
 <script type="text/javascript">
 			var initialVisibilityState = document.webkitVisibilityState;
+					window.yelp = window.yelp || {};
+					yelp.performance = {};
+					yelp.performance.timings = {};
+					yelp.performance.timings.headStartTimestamp = (new Date()).getTime();
 
 				window._gaq = window._gaq || [];
 	_gaq.push(
@@ -51,11 +55,21 @@
 		<meta property="fb:app_id" content="97534753161">
 		<meta property="og:image" content="http://s3-media4.ak.yelpcdn.com/bphoto/v4ZKPb_Y0LuIsuFPYIl0Pw/m.jpg">
 
+<script type="text/javascript">
+					yelp.performance.timings.headCSSStartTimestamp = (new Date()).getTime();
+
+</script>
 				<link rel="stylesheet" type="text/css" href="http://media4.ak.yelpcdn.com/static/20100624938787515/css/www-pkg-en_US.min.css">
 		<link rel="stylesheet" type="text/css" media="all" href="http://media1.ak.yelpcdn.com/static/201006242125499786/css/biz_details-pkg-en_US.min.css">
 
 	<link rel="stylesheet" type="text/css" media="print" href="http://media1.ak.yelpcdn.com/static/201006241978118750/css/biz_print-en_US.min.css">
+<script type="text/javascript">
+					yelp.performance.timings.headCSSEndTimestamp = (new Date()).getTime();
+
+</script>
 		
+				<script type="text/javascript">yelp.performance.timings.headJSStartTimestamp = (new Date()).getTime();</script>
+
 
 <script type="text/javascript">
 					
@@ -63,7 +77,7 @@
 
 	var imagesHostUrl = "http://media1.ak.yelpcdn.com" + '/';
 
-	Yelp.unique_request_id = "2407dcdf3188b7eb";
+	Yelp.unique_request_id = "024133a3666a8caf";
 	Yelp.cookie_domain = ".yelp.com";
 
 	window.yelp = window.yelp || {};
@@ -79,13 +93,20 @@
 
 
 
-					yelp.config = {"cdn_origin_yelp": 1, "uid": null, "classLoggerLevel": "error", "url_scheme": "http", "cdn_shards": 4, "fbuid": null, "isLoggedIn": false, "isReadOnlyMode": false, "isSitRepEnabled": false, "isFBICEnabled": true, "isClientErrorsEnabled": true, "isReviewLanguageDetectionEnabled": true, "cdn_origin_s3": 2, "bizownerSiteURL": "https://biz.yelp.com/", "showSpellChecker": true, "isActivityFeedEnabled": true, "mobileUA": false, "uniqueRequestID": "2407dcdf3188b7eb", "servletName": "biz_details", "url": {"maputil": "http://media4.ak.yelpcdn.com/static/201007092455057220/js/maputil.min.js", "categoryYelpChooser": "http://media1.ak.yelpcdn.com/static/201007093963830045/js/category_yelp_chooser.min.js", "xsChannel": "https://media4.ak.yelpcdn.com/static/201007092766720026/js/yelp/util/secure_channel-async.min.js", "captcha": "https://www.google.com/recaptcha/api/js/recaptcha_ajax.js", "dragdrop": "http://media1.ak.yelpcdn.com/static/201007093862138833/js/vendor/prototype/dragdrop.min.js", "effects": "http://media4.ak.yelpcdn.com/static/20100709148215612/js/prototype_effects-pkg.min.js"}, "hideFBSyncFloater": null, "cdn_static_hostname_pattern": "s3-media%s.px.yelpcdn.com", "cdn_origin": 2, "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "unreadActivityCount": null, "bingMapsKey": "AvoTBU5YW57X2zdsJlJstIBzH6emsqH64BeuUs_smf7Vcw8QPLG9mM1U3Y6Oz2rT"};
+					yelp.config = {"cdn_origin_yelp": 1, "uid": null, "classLoggerLevel": "error", "url_scheme": "http", "cdn_shards": 4, "fbuid": null, "isLoggedIn": false, "isReadOnlyMode": false, "isSitRepEnabled": true, "isFBICEnabled": true, "isClientErrorsEnabled": false, "isReviewLanguageDetectionEnabled": true, "cdn_origin_s3": 2, "bizownerSiteURL": "https://biz.yelp.com/", "showSpellChecker": true, "isActivityFeedEnabled": true, "mobileUA": false, "uniqueRequestID": "024133a3666a8caf", "servletName": "biz_details", "url": {"maputil": "http://media4.ak.yelpcdn.com/static/201007092455057220/js/maputil.min.js", "categoryYelpChooser": "http://media1.ak.yelpcdn.com/static/201007093963830045/js/category_yelp_chooser.min.js", "xsChannel": "https://media4.ak.yelpcdn.com/static/201007092766720026/js/yelp/util/secure_channel-async.min.js", "captcha": "https://www.google.com/recaptcha/api/js/recaptcha_ajax.js", "dragdrop": "http://media1.ak.yelpcdn.com/static/201007093862138833/js/vendor/prototype/dragdrop.min.js", "effects": "http://media4.ak.yelpcdn.com/static/20100709148215612/js/prototype_effects-pkg.min.js"}, "hideFBSyncFloater": null, "cdn_static_hostname_pattern": "s3-media%s.ak.yelpcdn.com", "cdn_origin": 2, "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "unreadActivityCount": null, "bingMapsKey": "AvoTBU5YW57X2zdsJlJstIBzH6emsqH64BeuUs_smf7Vcw8QPLG9mM1U3Y6Oz2rT"};
 
+						yelp.util = {};
+						yelp.util.SitRepParams = {"datacenter": "365", "renderMode": 1, "action": "default", "uniqueRequestID": "024133a3666a8caf", "isLoggedIn": false, "clientIP": "148.107.2.20", "serverStartTime": 1318282104027, "site": "main", "yuv": "64DF4C5B54B8B664"};
+						yelp.util.SitRepParams['initialVisibilityState'] = initialVisibilityState;
 
 </script>
 
+					<script type="text/javascript">yelp.performance.timings.headJSMainLibrariesStartTimestamp = (new Date()).getTime();</script>
+
 
 					<script src="http://media4.ak.yelpcdn.com/static/201007093000563703/js/www-pkg-en_US.min.js" type="text/javascript"></script>
+
+					<script type="text/javascript">yelp.performance.timings.headJSMainLibrariesEndTimestamp = (new Date()).getTime();</script>
 
 
 
@@ -98,6 +119,8 @@
 		yelp.pages.www.biz_details.restaurant.gaTracking();
 
 </script>
+
+			<script type="text/javascript">yelp.performance.timings.headGAMStartTimestamp = (new Date()).getTime();</script>
 
 
 					<script src="//partner.googleadservices.com/gampad/google_service.js" type="text/javascript"></script>
@@ -156,14 +179,28 @@
 
 
 
+<script type="text/javascript">
+				yelp.performance.timings.headGAMEndTimestamp = (new Date()).getTime();
+				yelp.performance.timings.headJSEndTimestamp = (new Date()).getTime();
+
+</script>
 
 		<link rel="shortcut icon" href="http://media2.ak.yelpcdn.com/static/201012161623981098/img/ico/favicon.ico">
 
 
+<script type="text/javascript">
+					yelp.performance.timings.headEndTimestamp = (new Date()).getTime();
+					yelp.util.SitRep.init();
+
+</script>
 	</head>
 
 
 	<body id="yelp_main_body" class="us logged-out">
+<script type="text/javascript">
+					yelp.util.SitRep.measure("body:start");
+
+</script>
 
 			<div id="fb-root"></div>
 				<fb:connect-bar autorefresh="true" onNotDisplay="yelp.hub.publish('ext.FB.bluebar', false);" onClose="yelp.ui.blueBarToggle(false); yelp.hub.publish('ext.FB.bluebar', false);" onDisplay="yelp.ui.blueBarToggle(true); yelp.hub.publish('ext.FB.bluebar', true);"></fb:connect-bar>
@@ -377,7 +414,7 @@
 		<span id="bizPhone" class="tel">(310) 202-6633</span>
 
 		<div id="bizUrl">
-				<a href="/biz_redir?url=http%3A%2F%2Fwww.industrycafeandjazz.com&amp;src_bizid=OziyrYcQhJ7akX8FODEO-g&amp;cachebuster=1318029175&amp;s=980dba6a48ac824b6564a4e01cfcc531b6e9e591344737f80786184540655e2a" target="_blank" class="url">www.industrycafeandjazz.com</a>
+				<a href="/biz_redir?url=http%3A%2F%2Fwww.industrycafeandjazz.com&amp;src_bizid=OziyrYcQhJ7akX8FODEO-g&amp;cachebuster=1318282104&amp;s=35e5835b79f290fed9db738f788331ed4b1ca3247583e28c9408442da2d6b3a1" target="_blank" class="url">www.industrycafeandjazz.com</a>
 		</div>
 
 
@@ -1616,113 +1653,6 @@
 								
 
 
-	<li id="review_MJxGPbmOnMGpM6ud_Z9FdA" class="hreview review clearfix  externalReview">
-		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
-
-		<h4 class="offscreen">Review from Pirouz B.</h4>
-
-			<div class="wrap clearfix">
-				<div class="reviewer-details">
-					<div class="user-passport">
-			
-
-	<div class="photoBox pB-ss" >
-			
-				<a href="/user_details?userid=Bjk53R4kOFoSatwzDl67dg">
-					<img
-						
-						src="http://s3-media1.ak.yelpcdn.com/photo/ZH4Gr1T8QXIxSLNAiPugLA/ss.jpg"
-						
-						alt="Photo of Pirouz B."
-						
-						height="40" width="40"
-					>
-				</a>
-			
-
-	</div>
-
-		<ul class="user-stats">
-		<li class="is-elite">
-				&nbsp;
-		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 1 <span class="offscreen">friend</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 9 <span class="offscreen">reviews</span></span></li>
-	</ul>
-
-
-		<ul class="user-passport-info ieSucks">
-				<li class="user-name">
-						<a href="http://www.yelp.com/user_details?userid=Bjk53R4kOFoSatwzDl67dg">Pirouz B.</a>
-				</li>
-		</ul>
-</div>
-
-					<p class="reviewer_info">Studio City, CA</p>
-				</div>
-				<div class="review-content">
-					<div class="ext_rating">
-								<div class="rating">
-		<span class="star-img stars_4"><img class="" width="84" height="325" title="4.0 star rating" alt="4.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
-			<span class="value-title" title="4"></span>
-	</div>
-
-						<em class="dtreviewed smaller">7/8/2011 <span class="value-title" title="2011-07-08"></span></em>
-
-						
-
-
-
-						
-
-						 
-					</div>
-
-					    <p class="review_comment description ieSucks">The Ethiopian food here is amazing. Very friendly staff, and the jazz music never fails to impress.</p> 
-						
-
-							<div class="rateReview" id="ufc_MJxGPbmOnMGpM6ud_Z9FdA">
-				<p class="review-intro review-message">Was this review &hellip;?</p>
-				<ul>
-					<li class="useful ufc-btn">
-						<a href="#" rel="useful"><span>Useful</span></a>
-						<span>&nbsp;</span>
-					</li>
-					<li class="funny ufc-btn">
-						<a href="#" rel="funny"><span>Funny</span></a>
-						<span>&nbsp;</span>
-					</li>
-					<li class="cool ufc-btn">
-						<a href="#" rel="cool"><span>Cool</span></a>
-						<span>&nbsp;</span>
-					</li>
-				</ul>
-				<p class="review-message-after">&nbsp;</p>
-					</div>
-
-
-
-						<ul class="externalReviewActions">
-			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FBjk53R4kOFoSatwzDl67dg%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
-				Add owner comment
-			</a>
-</li>
-		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
-</li>
-		<li><a href="/biz_share?reviewid=MJxGPbmOnMGpM6ud_Z9FdA&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'MJxGPbmOnMGpM6ud_Z9FdA', null);return false">Send to a Friend</a></li>
-		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:MJxGPbmOnMGpM6ud_Z9FdA">Link to This Review</a></li>
-	</ul>
-
-
-					
-				</div>
-			</div>
-
-	</li>
-
-								
-
-
 	<li id="review_uEDdJqGENznSAMxkHHLhZA" class="hreview review clearfix  externalReview">
 		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
 
@@ -1818,6 +1748,113 @@
 </li>
 		<li><a href="/biz_share?reviewid=uEDdJqGENznSAMxkHHLhZA&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'uEDdJqGENznSAMxkHHLhZA', null);return false">Send to a Friend</a></li>
 		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:uEDdJqGENznSAMxkHHLhZA">Link to This Review</a></li>
+	</ul>
+
+
+					
+				</div>
+			</div>
+
+	</li>
+
+								
+
+
+	<li id="review_MJxGPbmOnMGpM6ud_Z9FdA" class="hreview review clearfix  externalReview">
+		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
+
+		<h4 class="offscreen">Review from Pirouz B.</h4>
+
+			<div class="wrap clearfix">
+				<div class="reviewer-details">
+					<div class="user-passport">
+			
+
+	<div class="photoBox pB-ss" >
+			
+				<a href="/user_details?userid=Bjk53R4kOFoSatwzDl67dg">
+					<img
+						
+						src="http://s3-media1.ak.yelpcdn.com/photo/ZH4Gr1T8QXIxSLNAiPugLA/ss.jpg"
+						
+						alt="Photo of Pirouz B."
+						
+						height="40" width="40"
+					>
+				</a>
+			
+
+	</div>
+
+		<ul class="user-stats">
+		<li class="is-elite">
+				&nbsp;
+		</li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 1 <span class="offscreen">friend</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 9 <span class="offscreen">reviews</span></span></li>
+	</ul>
+
+
+		<ul class="user-passport-info ieSucks">
+				<li class="user-name">
+						<a href="http://www.yelp.com/user_details?userid=Bjk53R4kOFoSatwzDl67dg">Pirouz B.</a>
+				</li>
+		</ul>
+</div>
+
+					<p class="reviewer_info">Studio City, CA</p>
+				</div>
+				<div class="review-content">
+					<div class="ext_rating">
+								<div class="rating">
+		<span class="star-img stars_4"><img class="" width="84" height="325" title="4.0 star rating" alt="4.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
+			<span class="value-title" title="4"></span>
+	</div>
+
+						<em class="dtreviewed smaller">7/8/2011 <span class="value-title" title="2011-07-08"></span></em>
+
+						
+
+
+
+						
+
+						 
+					</div>
+
+					    <p class="review_comment description ieSucks">The Ethiopian food here is amazing. Very friendly staff, and the jazz music never fails to impress.</p> 
+						
+
+							<div class="rateReview" id="ufc_MJxGPbmOnMGpM6ud_Z9FdA">
+				<p class="review-intro review-message">Was this review &hellip;?</p>
+				<ul>
+					<li class="useful ufc-btn">
+						<a href="#" rel="useful"><span>Useful</span></a>
+						<span>&nbsp;</span>
+					</li>
+					<li class="funny ufc-btn">
+						<a href="#" rel="funny"><span>Funny</span></a>
+						<span>&nbsp;</span>
+					</li>
+					<li class="cool ufc-btn">
+						<a href="#" rel="cool"><span>Cool</span></a>
+						<span>&nbsp;</span>
+					</li>
+				</ul>
+				<p class="review-message-after">&nbsp;</p>
+					</div>
+
+
+
+						<ul class="externalReviewActions">
+			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FBjk53R4kOFoSatwzDl67dg%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
+				Add owner comment
+			</a>
+</li>
+		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
+</li>
+		<li><a href="/biz_share?reviewid=MJxGPbmOnMGpM6ud_Z9FdA&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'MJxGPbmOnMGpM6ud_Z9FdA', null);return false">Send to a Friend</a></li>
+		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:MJxGPbmOnMGpM6ud_Z9FdA">Link to This Review</a></li>
 	</ul>
 
 
@@ -2074,7 +2111,7 @@
 		<li class="is-elite">
 				<a class="miniOrange" href="http://www.yelp.com/elite" title="User is Elite">Elite &#39;11</a>
 		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 2538 <span class="offscreen">friends</span></span></li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 2539 <span class="offscreen">friends</span></span></li>
 		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 659 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
@@ -2618,8 +2655,8 @@
 		<li class="is-elite">
 				<a class="miniOrange" href="http://www.yelp.com/elite" title="User is Elite">Elite &#39;11</a>
 		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 33 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 91 <span class="offscreen">reviews</span></span></li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 34 <span class="offscreen">friends</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 93 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
 
@@ -2944,7 +2981,7 @@
 				&nbsp;
 		</li>
 		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 2 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 107 <span class="offscreen">reviews</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 110 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
 
@@ -3234,114 +3271,6 @@
 								
 
 
-	<li id="review_itin28ZULxq7qbL-rH_pxw" class="hreview review clearfix  externalReview">
-		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
-
-		<h4 class="offscreen">Review from Eugene S.</h4>
-
-			<div class="wrap clearfix">
-				<div class="reviewer-details">
-					<div class="user-passport">
-			
-
-	<div class="photoBox pB-ss" >
-			
-				<a href="/user_details?userid=BMZbsA8PAVSrTJtmytvFgw">
-					<img
-						
-						src="http://s3-media2.ak.yelpcdn.com/photo/lH6S5EJSeCvo6y0fjuJkfg/ss.jpg"
-						
-						alt="Photo of Eugene S."
-						
-						height="40" width="40"
-					>
-				</a>
-			
-
-	</div>
-
-		<ul class="user-stats">
-		<li class="is-elite">
-				&nbsp;
-		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 31 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 21 <span class="offscreen">reviews</span></span></li>
-	</ul>
-
-
-		<ul class="user-passport-info ieSucks">
-				<li class="user-name">
-						<a href="http://www.yelp.com/user_details?userid=BMZbsA8PAVSrTJtmytvFgw">Eugene S.</a>
-				</li>
-		</ul>
-</div>
-
-					<p class="reviewer_info">Torrance, CA</p>
-				</div>
-				<div class="review-content">
-					<div class="ext_rating">
-								<div class="rating">
-		<span class="star-img stars_3"><img class="" width="84" height="325" title="3.0 star rating" alt="3.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
-			<span class="value-title" title="3"></span>
-	</div>
-
-						<em class="dtreviewed smaller">1/17/2011 <span class="value-title" title="2011-01-17"></span></em>
-
-								<a  href="/biz_photos/OziyrYcQhJ7akX8FODEO-g?userid=BMZbsA8PAVSrTJtmytvFgw" class="i-wrap i-camera-wrap photo-count"><i   class="i i-camera"></i> 1 photo</a>
-
-
-
-
-						
-
-						 
-					</div>
-
-					    <p class="review_comment description ieSucks">Disclaimer: I do not know much about Ethiopian food, so proceed with caution when reading my review.<br><br>I bought a DealPop voucher for this place and rushed to use it before it expired.  Gf and I came here for lunch on Sunday, roughly at 12:30 pm.  We parked on the street right in front of the restaurant and before we even entered, I had an inkling we would be the only patrons inside.  Sure enough, the place was empty...not even a server.  I walked toward the back and hollered to see if anyone was inside.  A sweet Ethiopian woman, who was the cook, came out and greeted us.  However, she could not speak English so she whipped out her cell phone, called some random guy and handed me the phone.  On the other end was someone who I assumed to be the owner, as he was explaining how the DealPop voucher works.  I placed our order with Mr. Phone Server and handed the phone back to the cook.  I wondered if this would be the future of the restaurant business: no servers, just cooks, use phones/computers to place orders. <br><br>We ordered the chicken tibisi and vegetarian platter.  Chicken was a little dry, but I liked how it was seasoned.  The collard greens could have been a little softer, but still good and went well with the chicken. Also, the portion size was big enough for the both of us to share.  This is the second Ethiopian restaurants I've tried (first one was Merkato on Fairfax). I felt like Merkato's food had more flavor and just more kick overall, but I still like Industry's food.  I will definitely come back for dinner and check out the live jazz. Mr. Phone Server was really nice, cool and laid-back, so that's good enough for me to come back.</p> 
-						
-
-							<div class="rateReview" id="ufc_itin28ZULxq7qbL-rH_pxw">
-				<p class="review-intro review-message">Was this review &hellip;?</p>
-				<ul>
-					<li class="useful ufc-btn">
-						<a href="#" rel="useful"><span>Useful</span></a>
-						<span>(1)</span>
-					</li>
-					<li class="funny ufc-btn">
-						<a href="#" rel="funny"><span>Funny</span></a>
-						<span>&nbsp;</span>
-					</li>
-					<li class="cool ufc-btn">
-						<a href="#" rel="cool"><span>Cool</span></a>
-						<span>&nbsp;</span>
-					</li>
-				</ul>
-				<p class="review-message-after">&nbsp;</p>
-					</div>
-
-
-
-						<ul class="externalReviewActions">
-			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FBMZbsA8PAVSrTJtmytvFgw%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
-				Add owner comment
-			</a>
-</li>
-		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
-</li>
-		<li><a href="/biz_share?reviewid=itin28ZULxq7qbL-rH_pxw&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'itin28ZULxq7qbL-rH_pxw', null);return false">Send to a Friend</a></li>
-		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:itin28ZULxq7qbL-rH_pxw">Link to This Review</a></li>
-	</ul>
-
-
-					
-				</div>
-			</div>
-
-	</li>
-
-								
-
-
 	<li id="review_HB2BUsz82b9QOc62QMlaFQ" class="hreview review clearfix  externalReview">
 		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
 
@@ -3437,6 +3366,114 @@
 </li>
 		<li><a href="/biz_share?reviewid=HB2BUsz82b9QOc62QMlaFQ&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'HB2BUsz82b9QOc62QMlaFQ', null);return false">Send to a Friend</a></li>
 		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:HB2BUsz82b9QOc62QMlaFQ">Link to This Review</a></li>
+	</ul>
+
+
+					
+				</div>
+			</div>
+
+	</li>
+
+								
+
+
+	<li id="review_itin28ZULxq7qbL-rH_pxw" class="hreview review clearfix  externalReview">
+		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
+
+		<h4 class="offscreen">Review from Eugene S.</h4>
+
+			<div class="wrap clearfix">
+				<div class="reviewer-details">
+					<div class="user-passport">
+			
+
+	<div class="photoBox pB-ss" >
+			
+				<a href="/user_details?userid=BMZbsA8PAVSrTJtmytvFgw">
+					<img
+						
+						src="http://s3-media2.ak.yelpcdn.com/photo/lH6S5EJSeCvo6y0fjuJkfg/ss.jpg"
+						
+						alt="Photo of Eugene S."
+						
+						height="40" width="40"
+					>
+				</a>
+			
+
+	</div>
+
+		<ul class="user-stats">
+		<li class="is-elite">
+				&nbsp;
+		</li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 32 <span class="offscreen">friends</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 21 <span class="offscreen">reviews</span></span></li>
+	</ul>
+
+
+		<ul class="user-passport-info ieSucks">
+				<li class="user-name">
+						<a href="http://www.yelp.com/user_details?userid=BMZbsA8PAVSrTJtmytvFgw">Eugene S.</a>
+				</li>
+		</ul>
+</div>
+
+					<p class="reviewer_info">Torrance, CA</p>
+				</div>
+				<div class="review-content">
+					<div class="ext_rating">
+								<div class="rating">
+		<span class="star-img stars_3"><img class="" width="84" height="325" title="3.0 star rating" alt="3.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
+			<span class="value-title" title="3"></span>
+	</div>
+
+						<em class="dtreviewed smaller">1/17/2011 <span class="value-title" title="2011-01-17"></span></em>
+
+								<a  href="/biz_photos/OziyrYcQhJ7akX8FODEO-g?userid=BMZbsA8PAVSrTJtmytvFgw" class="i-wrap i-camera-wrap photo-count"><i   class="i i-camera"></i> 1 photo</a>
+
+
+
+
+						
+
+						 
+					</div>
+
+					    <p class="review_comment description ieSucks">Disclaimer: I do not know much about Ethiopian food, so proceed with caution when reading my review.<br><br>I bought a DealPop voucher for this place and rushed to use it before it expired.  Gf and I came here for lunch on Sunday, roughly at 12:30 pm.  We parked on the street right in front of the restaurant and before we even entered, I had an inkling we would be the only patrons inside.  Sure enough, the place was empty...not even a server.  I walked toward the back and hollered to see if anyone was inside.  A sweet Ethiopian woman, who was the cook, came out and greeted us.  However, she could not speak English so she whipped out her cell phone, called some random guy and handed me the phone.  On the other end was someone who I assumed to be the owner, as he was explaining how the DealPop voucher works.  I placed our order with Mr. Phone Server and handed the phone back to the cook.  I wondered if this would be the future of the restaurant business: no servers, just cooks, use phones/computers to place orders. <br><br>We ordered the chicken tibisi and vegetarian platter.  Chicken was a little dry, but I liked how it was seasoned.  The collard greens could have been a little softer, but still good and went well with the chicken. Also, the portion size was big enough for the both of us to share.  This is the second Ethiopian restaurants I've tried (first one was Merkato on Fairfax). I felt like Merkato's food had more flavor and just more kick overall, but I still like Industry's food.  I will definitely come back for dinner and check out the live jazz. Mr. Phone Server was really nice, cool and laid-back, so that's good enough for me to come back.</p> 
+						
+
+							<div class="rateReview" id="ufc_itin28ZULxq7qbL-rH_pxw">
+				<p class="review-intro review-message">Was this review &hellip;?</p>
+				<ul>
+					<li class="useful ufc-btn">
+						<a href="#" rel="useful"><span>Useful</span></a>
+						<span>(1)</span>
+					</li>
+					<li class="funny ufc-btn">
+						<a href="#" rel="funny"><span>Funny</span></a>
+						<span>&nbsp;</span>
+					</li>
+					<li class="cool ufc-btn">
+						<a href="#" rel="cool"><span>Cool</span></a>
+						<span>&nbsp;</span>
+					</li>
+				</ul>
+				<p class="review-message-after">&nbsp;</p>
+					</div>
+
+
+
+						<ul class="externalReviewActions">
+			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FBMZbsA8PAVSrTJtmytvFgw%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
+				Add owner comment
+			</a>
+</li>
+		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
+</li>
+		<li><a href="/biz_share?reviewid=itin28ZULxq7qbL-rH_pxw&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'itin28ZULxq7qbL-rH_pxw', null);return false">Send to a Friend</a></li>
+		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:itin28ZULxq7qbL-rH_pxw">Link to This Review</a></li>
 	</ul>
 
 
@@ -3912,7 +3949,7 @@
 		<li class="is-elite">
 				<a class="miniOrange" href="http://www.yelp.com/elite" title="User is Elite">Elite &#39;11</a>
 		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 95 <span class="offscreen">friends</span></span></li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 97 <span class="offscreen">friends</span></span></li>
 		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 342 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
@@ -4019,8 +4056,8 @@
 		<li class="is-elite">
 				<a class="miniOrange" href="http://www.yelp.com/elite" title="User is Elite">Elite &#39;11</a>
 		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 296 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 354 <span class="offscreen">reviews</span></span></li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 301 <span class="offscreen">friends</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 355 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
 
@@ -4084,6 +4121,117 @@
 </li>
 		<li><a href="/biz_share?reviewid=ZV6DRqDbzJn8_fn0mZLqMg&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'ZV6DRqDbzJn8_fn0mZLqMg', null);return false">Send to a Friend</a></li>
 		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:ZV6DRqDbzJn8_fn0mZLqMg">Link to This Review</a></li>
+	</ul>
+
+
+					
+				</div>
+			</div>
+
+	</li>
+
+								
+
+
+	<li id="review_Zy3pl5Olm9bWfdt42Y2PAA" class="hreview review clearfix  externalReview">
+		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
+
+		<h4 class="offscreen">Review from Michelle P.</h4>
+
+			<div class="wrap clearfix">
+				<div class="reviewer-details">
+					<div class="user-passport">
+			
+
+	<div class="photoBox pB-ss" >
+			
+				<a href="/user_details?userid=hiebCHxmMxdD1vAVtI2RVQ">
+					<img
+						
+						src="http://s3-media3.ak.yelpcdn.com/photo/waO6YnT-IqQef7CEPihqEg/ss.jpg"
+						
+						alt="Photo of Michelle P."
+						
+						height="40" width="40"
+					>
+				</a>
+			
+
+	</div>
+
+		<ul class="user-stats">
+		<li class="is-elite">
+				&nbsp;
+		</li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 114 <span class="offscreen">friends</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 287 <span class="offscreen">reviews</span></span></li>
+	</ul>
+
+
+		<ul class="user-passport-info ieSucks">
+				<li class="user-name">
+						<a href="http://www.yelp.com/user_details?userid=hiebCHxmMxdD1vAVtI2RVQ">Michelle P.</a>
+				</li>
+		</ul>
+</div>
+
+					<p class="reviewer_info">Long Beach, CA</p>
+				</div>
+				<div class="review-content">
+					<div class="ext_rating">
+								<div class="rating">
+		<span class="star-img stars_5"><img class="" width="84" height="325" title="5.0 star rating" alt="5.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
+			<span class="value-title" title="5"></span>
+	</div>
+
+						<em class="dtreviewed smaller">7/21/2009 <span class="value-title" title="2009-07-21"></span></em>
+
+						
+
+
+
+						
+
+						 
+					</div>
+
+					    <p class="review_comment description ieSucks">I've only been there once, and it was years, and years ago.  Like three.  But, that tells you how good this place is.  I was so happy when I learned they were still open, as they had only just begun when I went.  We went in support of my then coworker who was trying to get the place going.<br><br>What I remember: African food that was so darn good and at the best prices!  I loved eating with my hands and it was my first time trying African food.  It was great.  No frills, just simple and good.<br><br>I can't wait to go back.</p> 
+								<p class="userLists">
+			<span  class="i-wrap i-list-wrap"><i   class="i i-list"></i> Listed in:</span>
+				<a href="/list/its-all-who-you-know-long-beach" title="Spots where I either know, or have gotten to know the owners or where the owner's have reached out to right wrongs. These&#8230;">It's all who you know!</a>
+		</p>
+
+
+							<div class="rateReview" id="ufc_Zy3pl5Olm9bWfdt42Y2PAA">
+				<p class="review-intro review-message">Was this review &hellip;?</p>
+				<ul>
+					<li class="useful ufc-btn">
+						<a href="#" rel="useful"><span>Useful</span></a>
+						<span>(1)</span>
+					</li>
+					<li class="funny ufc-btn">
+						<a href="#" rel="funny"><span>Funny</span></a>
+						<span>&nbsp;</span>
+					</li>
+					<li class="cool ufc-btn">
+						<a href="#" rel="cool"><span>Cool</span></a>
+						<span>(1)</span>
+					</li>
+				</ul>
+				<p class="review-message-after">&nbsp;</p>
+					</div>
+
+
+
+						<ul class="externalReviewActions">
+			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FhiebCHxmMxdD1vAVtI2RVQ%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
+				Add owner comment
+			</a>
+</li>
+		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
+</li>
+		<li><a href="/biz_share?reviewid=Zy3pl5Olm9bWfdt42Y2PAA&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'Zy3pl5Olm9bWfdt42Y2PAA', null);return false">Send to a Friend</a></li>
+		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:Zy3pl5Olm9bWfdt42Y2PAA">Link to This Review</a></li>
 	</ul>
 
 
@@ -4310,117 +4458,6 @@
 								
 
 
-	<li id="review_Zy3pl5Olm9bWfdt42Y2PAA" class="hreview review clearfix  externalReview">
-		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
-
-		<h4 class="offscreen">Review from Michelle P.</h4>
-
-			<div class="wrap clearfix">
-				<div class="reviewer-details">
-					<div class="user-passport">
-			
-
-	<div class="photoBox pB-ss" >
-			
-				<a href="/user_details?userid=hiebCHxmMxdD1vAVtI2RVQ">
-					<img
-						
-						src="http://s3-media3.ak.yelpcdn.com/photo/waO6YnT-IqQef7CEPihqEg/ss.jpg"
-						
-						alt="Photo of Michelle P."
-						
-						height="40" width="40"
-					>
-				</a>
-			
-
-	</div>
-
-		<ul class="user-stats">
-		<li class="is-elite">
-				&nbsp;
-		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 114 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 287 <span class="offscreen">reviews</span></span></li>
-	</ul>
-
-
-		<ul class="user-passport-info ieSucks">
-				<li class="user-name">
-						<a href="http://www.yelp.com/user_details?userid=hiebCHxmMxdD1vAVtI2RVQ">Michelle P.</a>
-				</li>
-		</ul>
-</div>
-
-					<p class="reviewer_info">Long Beach, CA</p>
-				</div>
-				<div class="review-content">
-					<div class="ext_rating">
-								<div class="rating">
-		<span class="star-img stars_5"><img class="" width="84" height="325" title="5.0 star rating" alt="5.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
-			<span class="value-title" title="5"></span>
-	</div>
-
-						<em class="dtreviewed smaller">7/21/2009 <span class="value-title" title="2009-07-21"></span></em>
-
-						
-
-
-
-						
-
-						 
-					</div>
-
-					    <p class="review_comment description ieSucks">I've only been there once, and it was years, and years ago.  Like three.  But, that tells you how good this place is.  I was so happy when I learned they were still open, as they had only just begun when I went.  We went in support of my then coworker who was trying to get the place going.<br><br>What I remember: African food that was so darn good and at the best prices!  I loved eating with my hands and it was my first time trying African food.  It was great.  No frills, just simple and good.<br><br>I can't wait to go back.</p> 
-								<p class="userLists">
-			<span  class="i-wrap i-list-wrap"><i   class="i i-list"></i> Listed in:</span>
-				<a href="/list/its-all-who-you-know-long-beach" title="Spots where I either know, or have gotten to know the owners or where the owner's have reached out to right wrongs. These&#8230;">It's all who you know!</a>
-		</p>
-
-
-							<div class="rateReview" id="ufc_Zy3pl5Olm9bWfdt42Y2PAA">
-				<p class="review-intro review-message">Was this review &hellip;?</p>
-				<ul>
-					<li class="useful ufc-btn">
-						<a href="#" rel="useful"><span>Useful</span></a>
-						<span>(1)</span>
-					</li>
-					<li class="funny ufc-btn">
-						<a href="#" rel="funny"><span>Funny</span></a>
-						<span>&nbsp;</span>
-					</li>
-					<li class="cool ufc-btn">
-						<a href="#" rel="cool"><span>Cool</span></a>
-						<span>(1)</span>
-					</li>
-				</ul>
-				<p class="review-message-after">&nbsp;</p>
-					</div>
-
-
-
-						<ul class="externalReviewActions">
-			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FhiebCHxmMxdD1vAVtI2RVQ%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
-				Add owner comment
-			</a>
-</li>
-		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
-</li>
-		<li><a href="/biz_share?reviewid=Zy3pl5Olm9bWfdt42Y2PAA&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'Zy3pl5Olm9bWfdt42Y2PAA', null);return false">Send to a Friend</a></li>
-		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:Zy3pl5Olm9bWfdt42Y2PAA">Link to This Review</a></li>
-	</ul>
-
-
-					
-				</div>
-			</div>
-
-	</li>
-
-								
-
-
 	<li id="review_BsloT6kYC8wSSvicOeDgkQ" class="hreview review clearfix  externalReview">
 		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
 
@@ -4528,6 +4565,114 @@
 								
 
 
+	<li id="review_LFjzQg31DH42sIY08EoNXA" class="hreview review clearfix  externalReview">
+		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
+
+		<h4 class="offscreen">Review from Kina T.</h4>
+
+			<div class="wrap clearfix">
+				<div class="reviewer-details">
+					<div class="user-passport">
+			
+
+	<div class="photoBox pB-ss" >
+			
+				<a href="/user_details?userid=WwNYXJSOu3G8fQSU1nYi1Q">
+					<img
+						
+						src="http://s3-media2.ak.yelpcdn.com/photo/-vFRkC6ku9EkrWgUK8ROqA/ss.jpg"
+						
+						alt="Photo of Kina T."
+						
+						height="40" width="40"
+					>
+				</a>
+			
+
+	</div>
+
+		<ul class="user-stats">
+		<li class="is-elite">
+				&nbsp;
+		</li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 48 <span class="offscreen">friends</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 35 <span class="offscreen">reviews</span></span></li>
+	</ul>
+
+
+		<ul class="user-passport-info ieSucks">
+				<li class="user-name">
+						<a href="http://www.yelp.com/user_details?userid=WwNYXJSOu3G8fQSU1nYi1Q">Kina T.</a>
+				</li>
+		</ul>
+</div>
+
+					<p class="reviewer_info">Los Angeles, CA</p>
+				</div>
+				<div class="review-content">
+					<div class="ext_rating">
+								<div class="rating">
+		<span class="star-img stars_3"><img class="" width="84" height="325" title="3.0 star rating" alt="3.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
+			<span class="value-title" title="3"></span>
+	</div>
+
+						<em class="dtreviewed smaller">11/6/2009 <span class="value-title" title="2009-11-06"></span></em>
+
+								<a  href="/biz_photos/OziyrYcQhJ7akX8FODEO-g?userid=WwNYXJSOu3G8fQSU1nYi1Q" class="i-wrap i-camera-wrap photo-count"><i   class="i i-camera"></i> 1 photo</a>
+
+
+
+
+						
+
+						 
+					</div>
+
+					    <p class="review_comment description ieSucks">Found this place on yelp, checked it out last night.<br><br>Massive construction on Washington makes parking a bit of a challenge, gotta go into the neighborhood. but there was still plenty of it.<br><br>Restaurant is really chill, only 2 other parties in the place but my party of 6. live jazz was well done, not overly loud or overpowering. very chill and enjoyable.<br><br>drink service was prompt and frequent - we definitely appreciated our great server! the comfort food was a big hit, especially the fried chicken, steak, and mac and cheese. omg, you must have the mac and cheese when you come here. do not pass this up.<br><br>ethiopian food choices included the vegetarian platter, the chicken and the beef. hands down, the beef was the tastiest. chicken came next, with "spicy" flavor really not that spicy at all. unfortunately, i have to take stars away from the place for the lackluster vegetarian presence. most ethiopian places i've been to, the vegetarian platter is the highlight of the evening. this place, the veggies were bland and tasteless. all of them. none of them stood out in any way shape or form. it was quite disappointing.<br><br>if i go back, it will be for the ethiopian beef and the mac and cheese. hell yeah.<br><br>other "notices" i saw while dining - apparently tuesday nights is live country music, and wednesday nights is live salsa dancing. that explains why the tables are sparse and the floor so open. noice.</p> 
+						
+
+							<div class="rateReview" id="ufc_LFjzQg31DH42sIY08EoNXA">
+				<p class="review-intro review-message">Was this review &hellip;?</p>
+				<ul>
+					<li class="useful ufc-btn">
+						<a href="#" rel="useful"><span>Useful</span></a>
+						<span>&nbsp;</span>
+					</li>
+					<li class="funny ufc-btn">
+						<a href="#" rel="funny"><span>Funny</span></a>
+						<span>&nbsp;</span>
+					</li>
+					<li class="cool ufc-btn">
+						<a href="#" rel="cool"><span>Cool</span></a>
+						<span>(1)</span>
+					</li>
+				</ul>
+				<p class="review-message-after">&nbsp;</p>
+					</div>
+
+
+
+						<ul class="externalReviewActions">
+			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FWwNYXJSOu3G8fQSU1nYi1Q%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
+				Add owner comment
+			</a>
+</li>
+		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
+</li>
+		<li><a href="/biz_share?reviewid=LFjzQg31DH42sIY08EoNXA&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'LFjzQg31DH42sIY08EoNXA', null);return false">Send to a Friend</a></li>
+		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:LFjzQg31DH42sIY08EoNXA">Link to This Review</a></li>
+	</ul>
+
+
+					
+				</div>
+			</div>
+
+	</li>
+
+								
+
+
 	<li id="review_YHmHub5it1jA669rSjzRyA" class="hreview review clearfix  externalReview">
 		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
 
@@ -4558,7 +4703,7 @@
 		<li class="is-elite">
 				<a class="miniOrange" href="http://www.yelp.com/elite" title="User is Elite">Elite &#39;11</a>
 		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 237 <span class="offscreen">friends</span></span></li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 238 <span class="offscreen">friends</span></span></li>
 		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 706 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
@@ -4742,221 +4887,6 @@
 								
 
 
-	<li id="review_LFjzQg31DH42sIY08EoNXA" class="hreview review clearfix  externalReview">
-		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
-
-		<h4 class="offscreen">Review from Kina T.</h4>
-
-			<div class="wrap clearfix">
-				<div class="reviewer-details">
-					<div class="user-passport">
-			
-
-	<div class="photoBox pB-ss" >
-			
-				<a href="/user_details?userid=WwNYXJSOu3G8fQSU1nYi1Q">
-					<img
-						
-						src="http://s3-media2.ak.yelpcdn.com/photo/-vFRkC6ku9EkrWgUK8ROqA/ss.jpg"
-						
-						alt="Photo of Kina T."
-						
-						height="40" width="40"
-					>
-				</a>
-			
-
-	</div>
-
-		<ul class="user-stats">
-		<li class="is-elite">
-				&nbsp;
-		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 48 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 35 <span class="offscreen">reviews</span></span></li>
-	</ul>
-
-
-		<ul class="user-passport-info ieSucks">
-				<li class="user-name">
-						<a href="http://www.yelp.com/user_details?userid=WwNYXJSOu3G8fQSU1nYi1Q">Kina T.</a>
-				</li>
-		</ul>
-</div>
-
-					<p class="reviewer_info">Los Angeles, CA</p>
-				</div>
-				<div class="review-content">
-					<div class="ext_rating">
-								<div class="rating">
-		<span class="star-img stars_3"><img class="" width="84" height="325" title="3.0 star rating" alt="3.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
-			<span class="value-title" title="3"></span>
-	</div>
-
-						<em class="dtreviewed smaller">11/6/2009 <span class="value-title" title="2009-11-06"></span></em>
-
-								<a  href="/biz_photos/OziyrYcQhJ7akX8FODEO-g?userid=WwNYXJSOu3G8fQSU1nYi1Q" class="i-wrap i-camera-wrap photo-count"><i   class="i i-camera"></i> 1 photo</a>
-
-
-
-
-						
-
-						 
-					</div>
-
-					    <p class="review_comment description ieSucks">Found this place on yelp, checked it out last night.<br><br>Massive construction on Washington makes parking a bit of a challenge, gotta go into the neighborhood. but there was still plenty of it.<br><br>Restaurant is really chill, only 2 other parties in the place but my party of 6. live jazz was well done, not overly loud or overpowering. very chill and enjoyable.<br><br>drink service was prompt and frequent - we definitely appreciated our great server! the comfort food was a big hit, especially the fried chicken, steak, and mac and cheese. omg, you must have the mac and cheese when you come here. do not pass this up.<br><br>ethiopian food choices included the vegetarian platter, the chicken and the beef. hands down, the beef was the tastiest. chicken came next, with "spicy" flavor really not that spicy at all. unfortunately, i have to take stars away from the place for the lackluster vegetarian presence. most ethiopian places i've been to, the vegetarian platter is the highlight of the evening. this place, the veggies were bland and tasteless. all of them. none of them stood out in any way shape or form. it was quite disappointing.<br><br>if i go back, it will be for the ethiopian beef and the mac and cheese. hell yeah.<br><br>other "notices" i saw while dining - apparently tuesday nights is live country music, and wednesday nights is live salsa dancing. that explains why the tables are sparse and the floor so open. noice.</p> 
-						
-
-							<div class="rateReview" id="ufc_LFjzQg31DH42sIY08EoNXA">
-				<p class="review-intro review-message">Was this review &hellip;?</p>
-				<ul>
-					<li class="useful ufc-btn">
-						<a href="#" rel="useful"><span>Useful</span></a>
-						<span>&nbsp;</span>
-					</li>
-					<li class="funny ufc-btn">
-						<a href="#" rel="funny"><span>Funny</span></a>
-						<span>&nbsp;</span>
-					</li>
-					<li class="cool ufc-btn">
-						<a href="#" rel="cool"><span>Cool</span></a>
-						<span>&nbsp;</span>
-					</li>
-				</ul>
-				<p class="review-message-after">&nbsp;</p>
-					</div>
-
-
-
-						<ul class="externalReviewActions">
-			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FWwNYXJSOu3G8fQSU1nYi1Q%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
-				Add owner comment
-			</a>
-</li>
-		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
-</li>
-		<li><a href="/biz_share?reviewid=LFjzQg31DH42sIY08EoNXA&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', 'LFjzQg31DH42sIY08EoNXA', null);return false">Send to a Friend</a></li>
-		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:LFjzQg31DH42sIY08EoNXA">Link to This Review</a></li>
-	</ul>
-
-
-					
-				</div>
-			</div>
-
-	</li>
-
-								
-
-
-	<li id="review_0zUH-nW2NNvaJHXx9hvmWQ" class="hreview review clearfix  externalReview">
-		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
-
-		<h4 class="offscreen">Review from Curly Q.</h4>
-
-			<div class="wrap clearfix">
-				<div class="reviewer-details">
-					<div class="user-passport">
-			
-
-	<div class="photoBox pB-ss" >
-			
-				<a href="/user_details?userid=C8ApiWfB3OMXtWQ1JIvcGg">
-					<img
-						
-						src="http://s3-media4.ak.yelpcdn.com/photo/Sd9cMwpnXYBlCkDYk2kZGA/ss.jpg"
-						
-						alt="Photo of Curly Q."
-						
-						height="40" width="40"
-					>
-				</a>
-			
-
-	</div>
-
-		<ul class="user-stats">
-		<li class="is-elite">
-				&nbsp;
-		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 11 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 6 <span class="offscreen">reviews</span></span></li>
-	</ul>
-
-
-		<ul class="user-passport-info ieSucks">
-				<li class="user-name">
-						<a href="http://www.yelp.com/user_details?userid=C8ApiWfB3OMXtWQ1JIvcGg">Curly Q.</a>
-				</li>
-		</ul>
-</div>
-
-					<p class="reviewer_info">Los Angeles, CA</p>
-				</div>
-				<div class="review-content">
-					<div class="ext_rating">
-								<div class="rating">
-		<span class="star-img stars_5"><img class="" width="84" height="325" title="5.0 star rating" alt="5.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
-			<span class="value-title" title="5"></span>
-	</div>
-
-						<em class="dtreviewed smaller">1/21/2010 <span class="value-title" title="2010-01-21"></span></em>
-
-						
-
-
-
-						
-
-						 
-					</div>
-
-					    <p class="review_comment description ieSucks">So I hadn't had Eritrean/Ethiopian food before coming to this place, but my Eritrean friend brought me so I had high expectations.  I was not disappointed in the slightest!  I was wowed by the chill atmosphere, the nice people, and of course, the food.  I brought my boyfriend and another couple a few weeks later, and everyone was equally impressed.  This place is truly a gem. <br><br>Order the veggie platter plus a meat dish or two.  My favorite veggie is the red lentils, but all are great.  You can choose from mild or spicy for the meat dishes, but spicy isn't really "spicy" anyway.  I think I like the beef dish the best - the spicy version has jalapenos. :)<br><br>Since this is family style dining, it's more fun to go with a group.<br><br>Apparently Tuesday night is poetry night, so that'll be my next adventure here.</p> 
-						
-
-							<div class="rateReview" id="ufc_0zUH-nW2NNvaJHXx9hvmWQ">
-				<p class="review-intro review-message">Was this review &hellip;?</p>
-				<ul>
-					<li class="useful ufc-btn">
-						<a href="#" rel="useful"><span>Useful</span></a>
-						<span>&nbsp;</span>
-					</li>
-					<li class="funny ufc-btn">
-						<a href="#" rel="funny"><span>Funny</span></a>
-						<span>&nbsp;</span>
-					</li>
-					<li class="cool ufc-btn">
-						<a href="#" rel="cool"><span>Cool</span></a>
-						<span>&nbsp;</span>
-					</li>
-				</ul>
-				<p class="review-message-after">&nbsp;</p>
-					</div>
-
-
-
-						<ul class="externalReviewActions">
-			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FC8ApiWfB3OMXtWQ1JIvcGg%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
-				Add owner comment
-			</a>
-</li>
-		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
-</li>
-		<li><a href="/biz_share?reviewid=0zUH-nW2NNvaJHXx9hvmWQ&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', '0zUH-nW2NNvaJHXx9hvmWQ', null);return false">Send to a Friend</a></li>
-		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:0zUH-nW2NNvaJHXx9hvmWQ">Link to This Review</a></li>
-	</ul>
-
-
-					
-				</div>
-			</div>
-
-	</li>
-
-								
-
-
 	<li id="review_YXPH5-rHB4YhS7hwdkn5Xg" class="hreview review clearfix  externalReview">
 		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
 
@@ -5061,6 +4991,113 @@
 
 	</li>
 
+								
+
+
+	<li id="review_0zUH-nW2NNvaJHXx9hvmWQ" class="hreview review clearfix  externalReview">
+		<span class="item hidden"><a class="include" href="#biz-vcard">Industry Cafe &amp; Jazz</a></span>
+
+		<h4 class="offscreen">Review from Curly Q.</h4>
+
+			<div class="wrap clearfix">
+				<div class="reviewer-details">
+					<div class="user-passport">
+			
+
+	<div class="photoBox pB-ss" >
+			
+				<a href="/user_details?userid=C8ApiWfB3OMXtWQ1JIvcGg">
+					<img
+						
+						src="http://s3-media4.ak.yelpcdn.com/photo/Sd9cMwpnXYBlCkDYk2kZGA/ss.jpg"
+						
+						alt="Photo of Curly Q."
+						
+						height="40" width="40"
+					>
+				</a>
+			
+
+	</div>
+
+		<ul class="user-stats">
+		<li class="is-elite">
+				&nbsp;
+		</li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 12 <span class="offscreen">friends</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 6 <span class="offscreen">reviews</span></span></li>
+	</ul>
+
+
+		<ul class="user-passport-info ieSucks">
+				<li class="user-name">
+						<a href="http://www.yelp.com/user_details?userid=C8ApiWfB3OMXtWQ1JIvcGg">Curly Q.</a>
+				</li>
+		</ul>
+</div>
+
+					<p class="reviewer_info">Los Angeles, CA</p>
+				</div>
+				<div class="review-content">
+					<div class="ext_rating">
+								<div class="rating">
+		<span class="star-img stars_5"><img class="" width="84" height="325" title="5.0 star rating" alt="5.0 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
+			<span class="value-title" title="5"></span>
+	</div>
+
+						<em class="dtreviewed smaller">1/21/2010 <span class="value-title" title="2010-01-21"></span></em>
+
+						
+
+
+
+						
+
+						 
+					</div>
+
+					    <p class="review_comment description ieSucks">So I hadn't had Eritrean/Ethiopian food before coming to this place, but my Eritrean friend brought me so I had high expectations.  I was not disappointed in the slightest!  I was wowed by the chill atmosphere, the nice people, and of course, the food.  I brought my boyfriend and another couple a few weeks later, and everyone was equally impressed.  This place is truly a gem. <br><br>Order the veggie platter plus a meat dish or two.  My favorite veggie is the red lentils, but all are great.  You can choose from mild or spicy for the meat dishes, but spicy isn't really "spicy" anyway.  I think I like the beef dish the best - the spicy version has jalapenos. :)<br><br>Since this is family style dining, it's more fun to go with a group.<br><br>Apparently Tuesday night is poetry night, so that'll be my next adventure here.</p> 
+						
+
+							<div class="rateReview" id="ufc_0zUH-nW2NNvaJHXx9hvmWQ">
+				<p class="review-intro review-message">Was this review &hellip;?</p>
+				<ul>
+					<li class="useful ufc-btn">
+						<a href="#" rel="useful"><span>Useful</span></a>
+						<span>&nbsp;</span>
+					</li>
+					<li class="funny ufc-btn">
+						<a href="#" rel="funny"><span>Funny</span></a>
+						<span>&nbsp;</span>
+					</li>
+					<li class="cool ufc-btn">
+						<a href="#" rel="cool"><span>Cool</span></a>
+						<span>&nbsp;</span>
+					</li>
+				</ul>
+				<p class="review-message-after">&nbsp;</p>
+					</div>
+
+
+
+						<ul class="externalReviewActions">
+			<li class="add-review-comment">			<a class="add-owner-comment" href="https://biz.yelp.com/login/add_owner_comment?return_url=%2Fr2r%2FOziyrYcQhJ7akX8FODEO-g%2Fcomment%2FC8ApiWfB3OMXtWQ1JIvcGg%2Fcompose&amp;biz_id=OziyrYcQhJ7akX8FODEO-g">
+				Add owner comment
+			</a>
+</li>
+		<li>	<a href="/signup" rel="industry-cafe-and-jazz-culver-city" class="bookmark" title="Something catch your eye?<br>Bookmark this business to build your own list of fun ideas to check out later!">Bookmark</a>&nbsp;&nbsp;
+</li>
+		<li><a href="/biz_share?reviewid=0zUH-nW2NNvaJHXx9hvmWQ&amp;bizid=OziyrYcQhJ7akX8FODEO-g&amp;return_url=%2Fbiz%2Findustry-cafe-and-jazz-culver-city" class="sendToFriend" onclick="yelp.ui.widget.SendToFriends.open(this, 'OziyrYcQhJ7akX8FODEO-g', '0zUH-nW2NNvaJHXx9hvmWQ', null);return false">Send to a Friend</a></li>
+		<li><a class="linkToThis" href="/biz/industry-cafe-and-jazz-culver-city#hrid:0zUH-nW2NNvaJHXx9hvmWQ">Link to This Review</a></li>
+	</ul>
+
+
+					
+				</div>
+			</div>
+
+	</li>
+
 						</ul>
 				</div>
 
@@ -5101,11 +5138,10 @@
 			<div id="mapdiv">
 				<a href="/map/industry-cafe-and-jazz-culver-city">
 
-					<img id="static_map" src="http://ecn.dev.virtualearth.net/REST/v1/Imagery/Map/Road/34.031693,-118.376783/15?mapSize=238%2C245&amp;mkt=en&amp;mapVersion=v1&amp;key=AvoTBU5YW57X2zdsJlJstIBzH6emsqH64BeuUs_smf7Vcw8QPLG9mM1U3Y6Oz2rT" alt="Map of Business">
+					<img id="static_map" src="http://maps.google.com/maps/api/staticmap?center=34.031693%2C-118.376783&amp;language=en&amp;zoom=15&amp;markers=shadow%3Atrue%7Cicon%3Ahttp%3A%2F%2Fd1lf0h1wlh3cdl.cloudfront.net%2Fimg%2Fbiz_details_map_marker.png%7C34.031693%2C-118.376783&amp;client=gme-yelp&amp;sensor=false&amp;size=238x245&amp;signature=iNPbggbih-7EOlz5XbLlPO6nuaE=" alt="Map of Business">
 				</a>
 				<i   id="zoom_in" class="i i-zoom-in"></i>
 				<i   id="zoom_out" class="i i-zoom-out"></i>
-					<img src="http://media2.ak.yelpcdn.com/static/201012164122183383/img/map/map_marker_star_shadow.png" style="position: absolute; z-index: 3; display: block; top: 94px; left: 98px;" >
 			</div>
 
 
@@ -5166,16 +5202,16 @@
 		
 
 	<div class="deal-photo pb-ss photoBox">
-		 <a href="/deals/rosalinds-ethiopian-restaurant-los-angeles"> 
-		<img src="http://s3-media4.ak.yelpcdn.com/dphoto/x3NECLlLAfQb5qutAdrpgA/ss.jpg"
+		 <a href="/deals/rascal-los-angeles"> 
+		<img src="http://s3-media4.ak.yelpcdn.com/dphoto/SG6Gn2DQO145KZKkeeoERA/ss.jpg"
 		     
 		     alt="$10 for $20 Certificate"
 			  width="40" height="40" >
 		 </a> 
 	</div>
 
-			<h4><a href="/deals/rosalinds-ethiopian-restaurant-los-angeles">$10 for $20 Certificate</a></h4>
-			<p>Rosalind's Ethiopian Restaurant</p>
+			<h4><a href="/deals/rascal-los-angeles">$10 for $20 Certificate</a></h4>
+			<p>Rascal</p>
 			<p class="location">Los Angeles, CA</p>
 		</li>
 
@@ -5469,7 +5505,7 @@
 
 
 
-	<script type="text/javascript">yelp.init.wrapper("yelp.init.bizDetails.page", {"isPayingBusiness": false, "hasReviews": true, "smsAllowedInCountry": true, "biz_details_map": "bing", "serviceAreaPoints": null, "dateFormat": "mm/dd/yyyy", "hasVideo": false, "hasReviewSummaries": true, "gmapsUrl": "http://maps.google.com/maps?client=gme-yelp&sensor=false&hl=en&file=api&v=2", "bmapsUrl": "http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?mkt=en&v=7.0", "isAccurateForMap": true, "showBookLog": false, "bizId": "OziyrYcQhJ7akX8FODEO-g", "fromDealEmail": false, "deferROModeScanLinks": true, "bizSafe": {"rating": 4.0, "phone": "(310) 202-6633", "formatted_city": "Culver City, CA", "biz_announcement": "", "formatted_city_name": "Culver City", "formatted_address": ["6039 Washington Blvd", "Culver City, CA 90232"], "id": "OziyrYcQhJ7akX8FODEO-g", "city": "Culver City", "review_count": 66, "accurate_for_map": true, "zip": "90232", "state": "CA", "latitude": 34.031692999999997, "cross_streets": "", "cross_streets_miniprefix": "at", "address1": "6039 Washington Blvd", "address2": "", "address3": "", "photos": [{"caption": null, "id": "_rYnpGKVHE69NU_XbS45fg", "is_primary": false}, {"caption": "chicken tibisi", "id": "R4VMSR4oBCydSMN_qzSS4Q", "is_primary": false}, {"caption": "Beef , Lamb  , chicken tibise and vege", "id": "IpQX5l-7NJFaVPRl-ic8yw", "is_primary": false}, {"caption": null, "id": "PuTw0sY5FhbtAwdcudSm2g", "is_primary": false}], "formatted_address_brief": ["6039 Washington Blvd", "Culver City, CA 90232"], "name": "Industry Cafe & Jazz", "neighborhoods": ["Culver City"], "category_yelp_ids": ["jImzX6azoubQCEVJwPxvhw", "f72iiYwrP2Nf1GJzOiXO-w", "WPhAdEQ1B1VW-ijm4PqB5Q"], "url": "/biz/industry-cafe-and-jazz-culver-city", "country": "US", "longitude": -118.376783}, "slides": null, "hasPriceRange": true, "showOtherAds": true, "dealOfferId": null, "bizMoviesCount": 0, "hasAboutThisBiz": false, "atbSnippetLength": 45, "selectedReviewId": null, "graphUrls": {"trend": "http://media1.ak.yelpcdn.com/biz_details_graphs/static/20110824/trend/OziyrYcQhJ7akX8FODEO-g/en_US", "dist": "http://media1.ak.yelpcdn.com/biz_details_graphs/static/20110824/dist/OziyrYcQhJ7akX8FODEO-g/en_US"}, "apiDomain": "api.yelp.com"});</script>
+	<script type="text/javascript">yelp.init.wrapper("yelp.init.bizDetails.page", {"isPayingBusiness": false, "hasReviews": true, "smsAllowedInCountry": true, "biz_details_map": "google", "serviceAreaPoints": null, "dateFormat": "mm/dd/yyyy", "hasVideo": false, "hasReviewSummaries": true, "gmapsUrl": "http://maps.google.com/maps?client=gme-yelp&sensor=false&hl=en&file=api&v=2", "bmapsUrl": "http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?mkt=en&v=7.0", "isAccurateForMap": true, "showBookLog": false, "bizId": "OziyrYcQhJ7akX8FODEO-g", "fromDealEmail": false, "deferROModeScanLinks": true, "bizSafe": {"rating": 4.0, "phone": "(310) 202-6633", "formatted_city": "Culver City, CA", "biz_announcement": "", "formatted_city_name": "Culver City", "formatted_address": ["6039 Washington Blvd", "Culver City, CA 90232"], "id": "OziyrYcQhJ7akX8FODEO-g", "city": "Culver City", "review_count": 66, "accurate_for_map": true, "zip": "90232", "state": "CA", "latitude": 34.031692999999997, "cross_streets": "", "cross_streets_miniprefix": "at", "address1": "6039 Washington Blvd", "address2": "", "address3": "", "photos": [{"caption": null, "id": "_rYnpGKVHE69NU_XbS45fg", "is_primary": false}, {"caption": "chicken tibisi", "id": "R4VMSR4oBCydSMN_qzSS4Q", "is_primary": false}, {"caption": "Beef , Lamb  , chicken tibise and vege", "id": "IpQX5l-7NJFaVPRl-ic8yw", "is_primary": false}, {"caption": null, "id": "PuTw0sY5FhbtAwdcudSm2g", "is_primary": false}], "formatted_address_brief": ["6039 Washington Blvd", "Culver City, CA 90232"], "name": "Industry Cafe & Jazz", "neighborhoods": ["Culver City"], "category_yelp_ids": ["jImzX6azoubQCEVJwPxvhw", "f72iiYwrP2Nf1GJzOiXO-w", "WPhAdEQ1B1VW-ijm4PqB5Q"], "url": "/biz/industry-cafe-and-jazz-culver-city", "country": "US", "longitude": -118.376783}, "slides": null, "hasPriceRange": true, "showOtherAds": true, "dealOfferId": null, "bizMoviesCount": 0, "hasAboutThisBiz": false, "atbSnippetLength": 45, "selectedReviewId": null, "graphUrls": {"trend": "http://media1.ak.yelpcdn.com/biz_details_graphs/static/20110824/trend/OziyrYcQhJ7akX8FODEO-g/en_US", "dist": "http://media1.ak.yelpcdn.com/biz_details_graphs/static/20110824/dist/OziyrYcQhJ7akX8FODEO-g/en_US"}, "apiDomain": "api.yelp.com"});</script>
 
 
 	<script type="text/javascript">yelp.init.wrapper("yelp.pages.makeYelpAdTooltip", null);</script>
@@ -5697,7 +5733,7 @@
 			<div style="display: none;" id="page-popups">
 			
 	<form id="signup-pitch-step-1" action="/deals/subscribe" method="post">
-			<input type="hidden" class="csrftok" name="csrftok" value="7gQcCtYFupgfli3ppW-PX9PNnf9g2lvNedrLx7DJTmDA3K4DjETbALLN2W6PQUcSff2NgkQDoxmEQw48dw6xAOvS0emKEcCm">
+			<input type="hidden" class="csrftok" name="csrftok" value="DZJhTlsP_yQFSbLSSmiRDvnEnH6kTaQDfREeP9LHiEisJ0hSio6BwYzGq6CKPkTORRGC0Ld3335rQubSBO-gtxt-QpF2LoLn">
 
 		<ul>
 			<li>
@@ -6322,6 +6358,8 @@
 		</div> 
 
 
+				<script type="text/javascript">yelp.util.SitRep.measure('body:footer:js:start');</script>
+
 
 				<script type="text/javascript">yelp.init.wrapper("yelp.init.base.widgets", {"initPopAddFriend": false, "deferROModeScanLinks": true, "initImageLoader": false, "isLoggedIn": false, "isReadOnly": false, "initActivityFeed": true, "initPopPM": false, "initPopCompliments": false, "initPopBookmarkSignup": true});</script>
 
@@ -6338,7 +6376,7 @@
 </script>
 
 			
-		<img src="/spice?r=2407dcdf3188b7eb" alt="">
+		<img src="/spice?r=024133a3666a8caf" alt="">
 
 			<script type="text/javascript">
 			yelp.async.Script.load((document.location.protocol == 'https:' ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js', function() {
@@ -6385,6 +6423,12 @@
 
 
 
+			<script type="text/javascript">yelp.util.SitRep.measure('body:footer:js:end');</script>
 
+
+<script type="text/javascript">
+					yelp.util.SitRep.measure('body:end');
+
+</script>
 	</body>
 </html>

@@ -9,6 +9,10 @@
 		
 <script type="text/javascript">
 			var initialVisibilityState = document.webkitVisibilityState;
+					window.yelp = window.yelp || {};
+					yelp.performance = {};
+					yelp.performance.timings = {};
+					yelp.performance.timings.headStartTimestamp = (new Date()).getTime();
 
 				window._gaq = window._gaq || [];
 	_gaq.push(
@@ -51,11 +55,21 @@
 		<meta property="fb:app_id" content="97534753161">
 		<meta property="og:image" content="http://s3-media3.ak.yelpcdn.com/bphoto/HY-jNWE3-lwppIDHRTWULQ/m.jpg">
 
+<script type="text/javascript">
+					yelp.performance.timings.headCSSStartTimestamp = (new Date()).getTime();
+
+</script>
 				<link rel="stylesheet" type="text/css" href="http://media4.ak.yelpcdn.com/static/20100624938787515/css/www-pkg-en_US.min.css">
 		<link rel="stylesheet" type="text/css" media="all" href="http://media1.ak.yelpcdn.com/static/201006242125499786/css/biz_details-pkg-en_US.min.css">
 
 	<link rel="stylesheet" type="text/css" media="print" href="http://media1.ak.yelpcdn.com/static/201006241978118750/css/biz_print-en_US.min.css">
+<script type="text/javascript">
+					yelp.performance.timings.headCSSEndTimestamp = (new Date()).getTime();
+
+</script>
 		
+				<script type="text/javascript">yelp.performance.timings.headJSStartTimestamp = (new Date()).getTime();</script>
+
 
 <script type="text/javascript">
 					
@@ -63,7 +77,7 @@
 
 	var imagesHostUrl = "http://media1.ak.yelpcdn.com" + '/';
 
-	Yelp.unique_request_id = "2345ce9b8eb26435";
+	Yelp.unique_request_id = "7687e94d891fa287";
 	Yelp.cookie_domain = ".yelp.com";
 
 	window.yelp = window.yelp || {};
@@ -79,13 +93,20 @@
 
 
 
-					yelp.config = {"cdn_origin_yelp": 1, "uid": null, "classLoggerLevel": "error", "url_scheme": "http", "cdn_shards": 4, "fbuid": null, "isLoggedIn": false, "isReadOnlyMode": false, "isSitRepEnabled": false, "isFBICEnabled": true, "isClientErrorsEnabled": false, "isReviewLanguageDetectionEnabled": true, "cdn_origin_s3": 2, "bizownerSiteURL": "https://biz.yelp.com/", "showSpellChecker": true, "isActivityFeedEnabled": true, "mobileUA": false, "uniqueRequestID": "2345ce9b8eb26435", "servletName": "biz_details", "url": {"maputil": "http://media4.ak.yelpcdn.com/static/201007092455057220/js/maputil.min.js", "categoryYelpChooser": "http://media1.ak.yelpcdn.com/static/201007093963830045/js/category_yelp_chooser.min.js", "xsChannel": "https://media4.ak.yelpcdn.com/static/201007092766720026/js/yelp/util/secure_channel-async.min.js", "captcha": "https://www.google.com/recaptcha/api/js/recaptcha_ajax.js", "dragdrop": "http://media1.ak.yelpcdn.com/static/201007093862138833/js/vendor/prototype/dragdrop.min.js", "effects": "http://media4.ak.yelpcdn.com/static/20100709148215612/js/prototype_effects-pkg.min.js"}, "hideFBSyncFloater": null, "cdn_static_hostname_pattern": "s3-media%s.px.yelpcdn.com", "cdn_origin": 2, "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "unreadActivityCount": null, "bingMapsKey": "AvoTBU5YW57X2zdsJlJstIBzH6emsqH64BeuUs_smf7Vcw8QPLG9mM1U3Y6Oz2rT"};
+					yelp.config = {"cdn_origin_yelp": 1, "uid": null, "classLoggerLevel": "error", "url_scheme": "http", "cdn_shards": 4, "fbuid": null, "isLoggedIn": false, "isReadOnlyMode": false, "isSitRepEnabled": true, "isFBICEnabled": true, "isClientErrorsEnabled": false, "isReviewLanguageDetectionEnabled": true, "cdn_origin_s3": 2, "bizownerSiteURL": "https://biz.yelp.com/", "showSpellChecker": true, "isActivityFeedEnabled": true, "mobileUA": false, "uniqueRequestID": "7687e94d891fa287", "servletName": "biz_details", "url": {"maputil": "http://media4.ak.yelpcdn.com/static/201007092455057220/js/maputil.min.js", "categoryYelpChooser": "http://media1.ak.yelpcdn.com/static/201007093963830045/js/category_yelp_chooser.min.js", "xsChannel": "https://media4.ak.yelpcdn.com/static/201007092766720026/js/yelp/util/secure_channel-async.min.js", "captcha": "https://www.google.com/recaptcha/api/js/recaptcha_ajax.js", "dragdrop": "http://media1.ak.yelpcdn.com/static/201007093862138833/js/vendor/prototype/dragdrop.min.js", "effects": "http://media4.ak.yelpcdn.com/static/20100709148215612/js/prototype_effects-pkg.min.js"}, "hideFBSyncFloater": null, "cdn_static_hostname_pattern": "s3-media%s.ak.yelpcdn.com", "cdn_origin": 2, "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "unreadActivityCount": null, "bingMapsKey": "AvoTBU5YW57X2zdsJlJstIBzH6emsqH64BeuUs_smf7Vcw8QPLG9mM1U3Y6Oz2rT"};
 
+						yelp.util = {};
+						yelp.util.SitRepParams = {"datacenter": "365", "renderMode": 1, "action": "default", "uniqueRequestID": "7687e94d891fa287", "isLoggedIn": false, "clientIP": "148.107.2.20", "serverStartTime": 1318282476006, "site": "main", "yuv": "501F260E6BA42959"};
+						yelp.util.SitRepParams['initialVisibilityState'] = initialVisibilityState;
 
 </script>
 
+					<script type="text/javascript">yelp.performance.timings.headJSMainLibrariesStartTimestamp = (new Date()).getTime();</script>
+
 
 					<script src="http://media4.ak.yelpcdn.com/static/201007093000563703/js/www-pkg-en_US.min.js" type="text/javascript"></script>
+
+					<script type="text/javascript">yelp.performance.timings.headJSMainLibrariesEndTimestamp = (new Date()).getTime();</script>
 
 
 
@@ -98,6 +119,8 @@
 		yelp.pages.www.biz_details.restaurant.gaTracking();
 
 </script>
+
+			<script type="text/javascript">yelp.performance.timings.headGAMStartTimestamp = (new Date()).getTime();</script>
 
 
 					<script src="//partner.googleadservices.com/gampad/google_service.js" type="text/javascript"></script>
@@ -146,14 +169,28 @@
 
 
 
+<script type="text/javascript">
+				yelp.performance.timings.headGAMEndTimestamp = (new Date()).getTime();
+				yelp.performance.timings.headJSEndTimestamp = (new Date()).getTime();
+
+</script>
 
 		<link rel="shortcut icon" href="http://media2.ak.yelpcdn.com/static/201012161623981098/img/ico/favicon.ico">
 
 
+<script type="text/javascript">
+					yelp.performance.timings.headEndTimestamp = (new Date()).getTime();
+					yelp.util.SitRep.init();
+
+</script>
 	</head>
 
 
 	<body id="yelp_main_body" class="us logged-out">
+<script type="text/javascript">
+					yelp.util.SitRep.measure("body:start");
+
+</script>
 
 			<div id="fb-root"></div>
 				<fb:connect-bar autorefresh="true" onNotDisplay="yelp.hub.publish('ext.FB.bluebar', false);" onClose="yelp.ui.blueBarToggle(false); yelp.hub.publish('ext.FB.bluebar', false);" onDisplay="yelp.ui.blueBarToggle(true); yelp.hub.publish('ext.FB.bluebar', true);"></fb:connect-bar>
@@ -341,7 +378,7 @@
 		<span id="bizPhone" class="tel">(323) 934-1595</span>
 
 		<div id="bizUrl">
-				<a href="/biz_redir?url=http%3A%2F%2Fwww.ngomarestaurant.com&amp;src_bizid=6IQ8cmfRNMdt-rt9u71tdw&amp;cachebuster=1318029176&amp;s=50d4bc765bf0f030b7fbe0e229d0c265c8ecfa6bf7570489c202c8bc264748df" target="_blank" class="url">www.ngomarestaurant.com</a>
+				<a href="/biz_redir?url=http%3A%2F%2Fwww.ngomarestaurant.com&amp;src_bizid=6IQ8cmfRNMdt-rt9u71tdw&amp;cachebuster=1318282476&amp;s=8c274380e4dc456269f9a91663fc2b90ba42e021a99fd8452afb057c3bb7078d" target="_blank" class="url">www.ngomarestaurant.com</a>
 		</div>
 
 
@@ -530,12 +567,12 @@
 		<div class="add-title">
 				<a href="#" class="yelp-ad-tip" >Yelp Ad</a>
 
-				<strong class="biz-name"><a class="add-tracking-link" href="/adredir?request_id=2345ce9b8eb26435&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=a3a3c0f4c9987fc809b13c5bf7b058042722747cb3d969854e34f66d708570af">Rosalind's Ethiopian Restaurant</a></strong>
+				<strong class="biz-name"><a class="add-tracking-link" href="/adredir?request_id=7687e94d891fa287&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=11e0c9200a04494bd6957f3422dc978be24831fe68a95a3b7ef65d3fa42c868e">Rosalind's Ethiopian Restaurant</a></strong>
 							<div class="rating">
 		<span class="star-img stars_3_half"><img class="" width="84" height="325" title="3.5 star rating" alt="3.5 star rating" src="http://media4.ak.yelpcdn.com/static/201012162808913227/img/ico/stars/stars_map.png"></span>
 	</div>
 
-					<span class="review-count">94 reviews</span>
+					<span class="review-count">95 reviews</span>
 		</div>
 <div class="yelp-add-content offer-add display-table clearfix media-block">
 <div class="media-avatar">
@@ -546,7 +583,7 @@
 		
 
 	<div class="deal-photo pb-ss photoBox">
-		 <a href="/adredir?request_id=2345ce9b8eb26435&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=a3a3c0f4c9987fc809b13c5bf7b058042722747cb3d969854e34f66d708570af"> 
+		 <a href="/adredir?request_id=7687e94d891fa287&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=11e0c9200a04494bd6957f3422dc978be24831fe68a95a3b7ef65d3fa42c868e"> 
 		<img src="http://s3-media4.ak.yelpcdn.com/dphoto/x3NECLlLAfQb5qutAdrpgA/ss.jpg"
 		     
 		     alt="Yelp Deal photo"
@@ -557,10 +594,10 @@
 
 </div><div class="display-table-cell media-story">
 				<div class="ie-tablecell-hack">
-						<strong  class="i-wrap i-deal-price-tag-wrap"><i   class="i i-deal-price-tag"></i> <a class="add-tracking-link" href="/adredir?request_id=2345ce9b8eb26435&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=a3a3c0f4c9987fc809b13c5bf7b058042722747cb3d969854e34f66d708570af">$10 for $20 Certificate</a></strong>
-					<blockquote cite="/adredir?request_id=2345ce9b8eb26435&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=a3a3c0f4c9987fc809b13c5bf7b058042722747cb3d969854e34f66d708570af">
+						<strong  class="i-wrap i-deal-price-tag-wrap"><i   class="i i-deal-price-tag"></i> <a class="add-tracking-link" href="/adredir?request_id=7687e94d891fa287&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=11e0c9200a04494bd6957f3422dc978be24831fe68a95a3b7ef65d3fa42c868e">$10 for $20 Certificate</a></strong>
+					<blockquote cite="/adredir?request_id=7687e94d891fa287&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=11e0c9200a04494bd6957f3422dc978be24831fe68a95a3b7ef65d3fa42c868e">
 							<p><cite>Marissa S.</cite> said: "Just got home from dinner here... my friend and I are doing a global food tour and we were feeling like a trip to Africa!  I have only been to two other Ethiopian restaurants - one&#8230;" 		<span class="nonwrapping">&nbsp;</span>
-	<a href="/adredir?request_id=2345ce9b8eb26435&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=a3a3c0f4c9987fc809b13c5bf7b058042722747cb3d969854e34f66d708570af" class="nonwrapping">read more &raquo;</a>
+	<a href="/adredir?request_id=7687e94d891fa287&amp;deal_id=DeZiHl1BZXndVz1ytFE1tg&amp;redirect_url=%2Fdeals%2Frosalinds-ethiopian-restaurant-los-angeles&amp;signature=11e0c9200a04494bd6957f3422dc978be24831fe68a95a3b7ef65d3fa42c868e" class="nonwrapping">read more &raquo;</a>
 </p>
 					</blockquote>
 				</div>
@@ -991,7 +1028,7 @@
 				&nbsp;
 		</li>
 		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 7 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 36 <span class="offscreen">reviews</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 37 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
 
@@ -1207,7 +1244,7 @@
 				&nbsp;
 		</li>
 		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 0 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 20 <span class="offscreen">reviews</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 22 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
 
@@ -1664,7 +1701,7 @@
 				<a class="miniOrange" href="http://www.yelp.com/elite" title="User is Elite">Elite &#39;11</a>
 		</li>
 		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 244 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 410 <span class="offscreen">reviews</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 413 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
 
@@ -3058,7 +3095,7 @@
 		<li class="is-elite">
 				&nbsp;
 		</li>
-		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 24 <span class="offscreen">friends</span></span></li>
+		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 25 <span class="offscreen">friends</span></span></li>
 		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 43 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
@@ -3594,7 +3631,7 @@
 				&nbsp;
 		</li>
 		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 15 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 117 <span class="offscreen">reviews</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 118 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
 
@@ -4045,7 +4082,7 @@
 				&nbsp;
 		</li>
 		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 2 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 72 <span class="offscreen">reviews</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 74 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
 
@@ -4152,7 +4189,7 @@
 				&nbsp;
 		</li>
 		<li class="friend-count miniOrange"><span  class="i-wrap i-friend-count-wrap"><i   class="i i-friend-count"></i> 35 <span class="offscreen">friends</span></span></li>
-		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 137 <span class="offscreen">reviews</span></span></li>
+		<li class="review-count miniOrange"><span  class="i-wrap i-review-count-wrap"><i   class="i i-review-count"></i> 141 <span class="offscreen">reviews</span></span></li>
 	</ul>
 
 
@@ -5192,17 +5229,17 @@
 		
 
 	<div class="deal-photo pb-ss photoBox">
-		 <a href="/deals/the-indian-kitchen-west-hollywood"> 
-		<img src="http://s3-media3.ak.yelpcdn.com/dphoto/zAF6yw7Bz-U6fj8NXFa3gw/ss.jpg"
+		 <a href="/deals/bamboo-house-los-angeles-3"> 
+		<img src="http://s3-media2.ak.yelpcdn.com/dphoto/zGejR82pxlBunp8j7gdgJQ/ss.jpg"
 		     
 		     alt="$10 for $20 Certificate"
 			  width="40" height="40" >
 		 </a> 
 	</div>
 
-			<h4><a href="/deals/the-indian-kitchen-west-hollywood">$10 for $20 Certificate</a></h4>
-			<p>The Indian Kitchen</p>
-			<p class="location">West Hollywood, CA</p>
+			<h4><a href="/deals/bamboo-house-los-angeles-3">$10 for $20 Certificate</a></h4>
+			<p>Bamboo House</p>
+			<p class="location">Los Angeles, CA</p>
 		</li>
 		<li>
 			
@@ -5212,16 +5249,16 @@
 		
 
 	<div class="deal-photo pb-ss photoBox">
-		 <a href="/deals/rosalinds-ethiopian-restaurant-los-angeles"> 
-		<img src="http://s3-media4.ak.yelpcdn.com/dphoto/x3NECLlLAfQb5qutAdrpgA/ss.jpg"
+		 <a href="/deals/rascal-los-angeles"> 
+		<img src="http://s3-media4.ak.yelpcdn.com/dphoto/SG6Gn2DQO145KZKkeeoERA/ss.jpg"
 		     
 		     alt="$10 for $20 Certificate"
 			  width="40" height="40" >
 		 </a> 
 	</div>
 
-			<h4><a href="/deals/rosalinds-ethiopian-restaurant-los-angeles">$10 for $20 Certificate</a></h4>
-			<p>Rosalind's Ethiopian Restaurant</p>
+			<h4><a href="/deals/rascal-los-angeles">$10 for $20 Certificate</a></h4>
+			<p>Rascal</p>
 			<p class="location">Los Angeles, CA</p>
 		</li>
 
@@ -5717,7 +5754,7 @@
 			<div style="display: none;" id="page-popups">
 			
 	<form id="signup-pitch-step-1" action="/deals/subscribe" method="post">
-			<input type="hidden" class="csrftok" name="csrftok" value="Chrsk73MYGAD6aucl1cS6dXKyuDSrEwUng8xkNdpzb98oZWKe2jH-e0H_yQZjyKK7W4m1gRrV9hePQxVnD-23SGnRuGjJten">
+			<input type="hidden" class="csrftok" name="csrftok" value="xt-_8FmkpEFtWXvE9nCAqgirXFB0uyCDqHUk84NEI6TLpffQ4OgZt44q1QTputkvU9zFHxmr5uwWO_GrhQ-R90so3-FVNJCW">
 
 		<ul>
 			<li>
@@ -6342,6 +6379,8 @@
 		</div> 
 
 
+				<script type="text/javascript">yelp.util.SitRep.measure('body:footer:js:start');</script>
+
 
 				<script type="text/javascript">yelp.init.wrapper("yelp.init.base.widgets", {"initPopAddFriend": false, "deferROModeScanLinks": true, "initImageLoader": false, "isLoggedIn": false, "isReadOnly": false, "initActivityFeed": true, "initPopPM": false, "initPopCompliments": false, "initPopBookmarkSignup": true});</script>
 
@@ -6358,7 +6397,7 @@
 </script>
 
 			
-		<img src="/spice?r=2345ce9b8eb26435" alt="">
+		<img src="/spice?r=7687e94d891fa287" alt="">
 
 			<script type="text/javascript">
 			yelp.async.Script.load((document.location.protocol == 'https:' ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js', function() {
@@ -6405,6 +6444,12 @@
 
 
 
+			<script type="text/javascript">yelp.util.SitRep.measure('body:footer:js:end');</script>
 
+
+<script type="text/javascript">
+					yelp.util.SitRep.measure('body:end');
+
+</script>
 	</body>
 </html>

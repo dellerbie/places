@@ -1,0 +1,44 @@
+--- 
+- !ruby/object:Image 
+  business: &id001 !ruby/object:Business 
+    categories: 
+    - Ethiopian
+    - Jazz & Blues
+    - African
+    city: Culver City
+    name: Industry Cafe & Jazz
+    phone: (310) 202-6633
+    state: CA
+    street: 6039 Washington Blvd
+    url: /biz/industry-cafe-and-jazz-culver-city
+    zip: "90232"
+  description: chicken tibisi
+  url: http://s3-media3.ak.yelpcdn.com/bphoto/R4VMSR4oBCydSMN_qzSS4Q/l.jpg
+- !ruby/object:Image 
+  business: *id001
+  description: "Beef , Lamb \xC2\xA0, chicken tibise and vege"
+  url: http://s3-media4.ak.yelpcdn.com/bphoto/IpQX5l-7NJFaVPRl-ic8yw/l.jpg
+- !ruby/object:Image 
+  business: *id001
+  description: Sambusas
+  url: http://s3-media4.ak.yelpcdn.com/bphoto/B_zxdotYIwVMfWwKTbVVeg/l.jpg
+- !ruby/object:Image 
+  business: *id001
+  description: Chicken Tibise + veggie platter
+  url: http://s3-media2.ak.yelpcdn.com/bphoto/m8eSs0zzco6kMMciEuaOOw/l.jpg
+- !ruby/object:Image 
+  business: *id001
+  description: trout with Vege
+  url: http://s3-media3.ak.yelpcdn.com/bphoto/tN6qv_FWU8766ynnZyUm4A/l.jpg
+- !ruby/object:Image 
+  business: *id001
+  description: veggie lunch plate $6
+  url: http://s3-media1.ak.yelpcdn.com/bphoto/ZwiOd6Ndxu7HIU7MgWsMVA/l.jpg
+- !ruby/object:Image 
+  business: *id001
+  description: art displayed on the walls
+  url: http://s3-media2.ak.yelpcdn.com/bphoto/fkNnqFLSRYawb5GcI7NnmQ/l.jpg
+- !ruby/object:Image 
+  business: *id001
+  description: Catfish, fries, salad
+  url: http://s3-media1.ak.yelpcdn.com/bphoto/jLLsrnW-jPzGvyWpApj71w/l.jpg
