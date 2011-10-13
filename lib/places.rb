@@ -1,1 +1,1 @@
-require 'places/downloaders/categories'
+require 'places/category_builder'
