@@ -4,8 +4,13 @@ PLACES_ROOT = File.expand_path('..')
 require 'places'
 
 module Places::CategoryBuilderSpecHelper
-  def should_not_overwrite(page)
-  
+  def overwrites_file?
+    page = yield
+    first_time = File.mtime(page)
+    sleep 1
+    yield
+    second_time = File.mtime(page)
+    first_time != second_time
   end
 end
 
@@ -19,12 +24,9 @@ describe Places::CategoryBuilder do
   end
   
   it "should not download and save the restaurants index page if it already exists" do
-    restaurants_page = Places::CategoryBuilder.download_and_save_restaurants_page
-    first_time = File.mtime(restaurants_page)
-    sleep 1
-    Places::CategoryBuilder.download_and_save_restaurants_page
-    second_time = File.mtime(restaurants_page)
-    first_time.should == second_time
+    overwrites_file? { 
+      Places::CategoryBuilder.download_and_save_restaurants_page 
+    }.should_not be_true
   end
   
   it "should find category html nodes" do 
@@ -42,19 +44,19 @@ describe Places::CategoryBuilder do
   
   it "should not overwrite seeds/categories.yml" do
     Places::CategoryBuilder.download_and_save_restaurants_page
-    categories_yaml = Places::CategoryBuilder.write_categories_to_yaml
-    first_time = File.mtime(categories_yaml)
-    sleep 1  # mtime doesn't track millisecs, so wait a second
-    Places::CategoryBuilder.write_categories_to_yaml
-    second_time = File.mtime(categories_yaml)
-    first_time.should == second_time
+    overwrites_file? { 
+      Places::CategoryBuilder.write_categories_to_yaml 
+    }.should_not be_true
   end
   
   it "should download and save the top40 restaurants by category pages" do
+    categories_file = Places::CategoryBuilder.write_categories_to_yaml
+    categories = YAML::load_file(categories_file)
     Places::CategoryBuilder.download_and_save_top_40_restaurants_by_category_pages
-    
-    
+    categories.each do |category| 
+      page = File.join(PLACES_ROOT, 'pages', 'top40', category + '.html')
+      File.should exist page
+      File.size(page).should be > 0
+    end
   end
-  
-  #it "should not download a top40 restaurant category page if it already exists"
 end
