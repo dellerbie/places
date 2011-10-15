@@ -20,6 +20,6 @@ class Business
   end
 
   def page_name
-    url.sub(/\/biz\//, '') + ".html"
+    "#{url.sub(/\/biz\//, '')}.html"
   end
 end

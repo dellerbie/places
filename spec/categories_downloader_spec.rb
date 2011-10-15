@@ -1,20 +1,10 @@
 $:.unshift(File.join('..', 'lib'))
 
 require 'places'
-
-module Places::CategoryBuilderSpecHelper
-  def overwrites_file?
-    page = yield
-    first_time = File.mtime(page)
-    sleep 1
-    yield
-    second_time = File.mtime(page)
-    first_time != second_time
-  end
-end
+require 'spec_helper'
 
 describe Places::CategoryBuilder do 
-  include Places::CategoryBuilderSpecHelper
+  include Places::SpecHelper
   
   it "should download and save the restaurants index page" do
     restaurants_page = Places::CategoryBuilder.download_and_save_restaurants_page
@@ -23,7 +13,7 @@ describe Places::CategoryBuilder do
   end
   
   it "should not download and save the restaurants index page if it already exists" do
-    overwrites_file? { 
+    overwrites_file?(Places::CategoryBuilder::RESTAURANTS_PAGE) { 
       Places::CategoryBuilder.download_and_save_restaurants_page 
     }.should_not be_true
   end
@@ -43,7 +33,7 @@ describe Places::CategoryBuilder do
   
   it "should not overwrite seeds/categories.yml" do
     Places::CategoryBuilder.download_and_save_restaurants_page
-    overwrites_file? { 
+    overwrites_file?((Places::CategoryBuilder::CATEGORIES_YAML)) { 
       Places::CategoryBuilder.write_categories_to_yaml 
     }.should_not be_true
   end
