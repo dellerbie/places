@@ -6,4 +6,6 @@ pages/top40/
 pages/businesses/
 pages/images/
 images/
+resized_images/
+config/aws.yml
 seeds/
