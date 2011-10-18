@@ -20,10 +20,10 @@ module Places
         return if File.exists?(thumb) and File.exists?(large)
         image_path = File.join(SEEDS_ROOT, 'images', image.business_folder, image.file_name)
         resize_image_to_size(image_path, :size => SMALL_IMAGE_SIZE, :extension => :sm)
-        resize_image_to_size(image_path)
+        resize_image_to_size(image_path, :size => LARGE_IMAGE_SIZE, :extension => :lg)
       end
       
-      def resize_image_to_size(image_path, options = {:size => LARGE_IMAGE_SIZE, :extension => :lg})
+      def resize_image_to_size(image_path, options = {})
         return unless File.exists?(image_path)
         begin 
           img = Magick::Image.read(image_path).first
