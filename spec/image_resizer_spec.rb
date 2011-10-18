@@ -9,11 +9,23 @@ require 'spec_helper'
 describe Places::ImageResizer do 
   include Places::SpecHelper
   
-  it "should resize image" do
-    Places::ImageResizer.resize_images
-    
-    image = Places::ImageBuilder.load_images.first
-    File.should exist(File.join(RESIZE_IMAGES_ROOT, image.thumb_file))
-    File.should exist(File.join(RESIZE_IMAGES_ROOT, image.large_file))
+  context "resizing images" do 
+    it "should resize image" do
+      Places::ImageResizer.resize_images
+      image = Places::ImageBuilder.load_images.first
+      File.should exist(File.join(RESIZE_IMAGES_ROOT, image.thumb_file))
+      File.should exist(File.join(RESIZE_IMAGES_ROOT, image.large_file))
+    end
+  end
+  
+  context "adding image dimensions to yaml" do
+    it "should copy images.yaml" do 
+      images = Places::ImageResizer.add_image_dimensions_to_yaml
+      copied_image_yaml = Places::ImageResizer::RESIZED_IMAGES_YAML
+      File.should exist(copied_image_yaml)
+      File.size(copied_image_yaml).should be > 0
+      images.first.thumb_size.should_not be_empty
+      images.first.large_size.should_not be_empty
+    end
   end
 end

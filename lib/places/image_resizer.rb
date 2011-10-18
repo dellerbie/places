@@ -1,14 +1,52 @@
 require 'rubygems'
 require 'yaml'
-require 'aws-sdk'
 require 'RMagick'
+require 'fileutils'
 
 module Places
   class ImageResizer
     SMALL_IMAGE_SIZE = '100x100'
-    LARGE_IMAGE_SIZE = '240x240'  
+    LARGE_IMAGE_SIZE = '240x240'
+    RESIZED_IMAGES_YAML = File.join(PLACES_ROOT, 'seeds', 'images_resized.yml')
     
-    class << self  
+    class << self
+      def add_image_dimensions_to_yaml
+        images = copy_images_yaml
+        images.each do |image| 
+          begin
+            set_image_dimensions(image)
+          rescue Exception => e
+            puts e.message
+          end
+        end
+        
+        save_images_to_yaml(images)
+        images
+      end
+      
+      def set_image_dimensions(image)
+        lg_image_path = File.join(RESIZE_IMAGES_ROOT, image.thumb_file)
+        sm_image_path = File.join(RESIZE_IMAGES_ROOT, image.large_file)
+        return unless File.exists?(lg_image_path) and File.exists?(sm_image_path)
+        
+        image.thumb_size = image_dimensions(lg_image_path)
+        image.large_size = image_dimensions(sm_image_path)
+      end
+      
+      def save_images_to_yaml(images)
+        File.open(RESIZED_IMAGES_YAML, "w") { |out| YAML::dump(images, out) }
+      end
+      
+      def image_dimensions(image_path)
+        image_binary = Magick::Image.read(image_path).first
+        "#{image_binary.columns}x#{image_binary.rows}"
+      end
+      
+      def copy_images_yaml
+        FileUtils.cp(Places::ImageBuilder::IMAGES_YAML, RESIZED_IMAGES_YAML)
+        YAML::load_file(RESIZED_IMAGES_YAML)
+      end
+      
       def resize_images
         images = Places::ImageBuilder.load_images
         images.each {|img| resize_image(img) }
