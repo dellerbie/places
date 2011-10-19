@@ -22,4 +22,16 @@ class Business
   def page_name
     "#{url.sub(/\/biz\//, '')}.html"
   end
+  
+  def to_json
+    {
+      :name         => name,
+      :street       => street,
+      :city         => city,
+      :state        => state,
+      :zip          => zip.to_i,
+      :phone        => phone,
+      :categories   => categories
+    }
+  end
 end
