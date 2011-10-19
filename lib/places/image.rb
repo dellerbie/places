@@ -1,5 +1,5 @@
 class Image
-  attr_accessor :url, :description, :business_url, :file_name, :thumb_size, :large_size
+  attr_accessor :url, :description, :business_url, :file_name, :thumb_size, :large_size, :business
   
   def business_folder
     business_url.sub(/\/biz\//, '')

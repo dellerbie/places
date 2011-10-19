@@ -27,5 +27,16 @@ describe Places::ImageResizer do
       images.first.thumb_size.should_not be_empty
       images.first.large_size.should_not be_empty
     end
+    
+    it "should add businesses to images yaml" do
+      yml_file = Places::ImageResizer::IMAGES_BUSINESSES_YAML
+      images = Places::ImageResizer.add_businesses_to_images
+      
+      File.should exist(yml_file)
+      File.size(yml_file).should be > 0
+      
+      images.first.business.should_not be_nil
+      images.first.business.name.should_not be_empty
+    end
   end
 end

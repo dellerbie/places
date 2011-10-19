@@ -8,9 +8,38 @@ module Places
     SMALL_IMAGE_SIZE = '100x100'
     LARGE_IMAGE_SIZE = '240x240'
     RESIZED_IMAGES_YAML = File.join(PLACES_ROOT, 'seeds', 'images_resized.yml')
+    IMAGES_BUSINESSES_YAML = File.join(PLACES_ROOT, 'seeds', 'images_with_businesses.yml')
     
     class << self
+      def add_businesses_to_images
+        return load_images_with_businesses if File.exists?(IMAGES_BUSINESSES_YAML)
+        images = load_resized_images
+        FileUtils.cp(RESIZED_IMAGES_YAML, IMAGES_BUSINESSES_YAML)
+        businesses = businesses_to_hash
+        images.each {|image| image.business = businesses[image.business_url]}
+        File.open(IMAGES_BUSINESSES_YAML, "w") { |out| YAML::dump(images, out) }
+        images
+      end
+      
+      def load_images_with_businesses
+        YAML::load_file(IMAGES_BUSINESSES_YAML)
+      end
+      
+      def load_resized_images
+        YAML::load_file(RESIZED_IMAGES_YAML)
+      end
+      
+      def businesses_to_hash
+        businesses = Places::BusinessBuilder.load_businesses
+        hash = {}
+        businesses.each do |business|
+          hash[business.url] = business
+        end
+        hash
+      end
+      
       def add_image_dimensions_to_yaml
+        return load_resized_images if File.exists?(RESIZED_IMAGES_YAML)
         images = copy_images_yaml
         images.each do |image| 
           begin
@@ -44,7 +73,7 @@ module Places
       
       def copy_images_yaml
         FileUtils.cp(Places::ImageBuilder::IMAGES_YAML, RESIZED_IMAGES_YAML)
-        YAML::load_file(RESIZED_IMAGES_YAML)
+        load_resized_images
       end
       
       def resize_images
