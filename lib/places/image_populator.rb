@@ -15,8 +15,11 @@ module Places
         _collection.drop();
         
         images.each do |image|
+          next if not image.resized?
           _collection.insert(image.to_json)
         end
+        _collection.create_index('keywords')
+        _collection.create_index('business.name')
       end
       
       def load_images_from_yaml

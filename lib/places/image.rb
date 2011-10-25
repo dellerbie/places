@@ -1,12 +1,12 @@
 require 'rubygems'
 require 'yaml'
 require 'fast_stemmer'
+require 'active_support/core_ext/string'
 
 class Image
   attr_accessor :url, :description, :business_url, :file_name, :thumb_size, :large_size, :business
   
   STOP_WORDS = YAML::load_file(File.join(PLACES_ROOT, 'config', 'stopwords.yml'))
-  NOISE_CHARS = %w(! ' " # $ % & ( ) * + . / \ : < > = ? @ [ ] ~ ` ; { } | _ - ^ ,)
   
   def business_folder
     business_url.sub(/\/biz\//, '')
@@ -18,6 +18,10 @@ class Image
   
   def large_file
     file_name.sub('.jpg', "_lg.jpg")
+  end
+  
+  def resized?
+    !(thumb_size.blank?) && !(large_size.blank?)
   end
   
   def to_json
@@ -36,9 +40,13 @@ class Image
   end
   
   def keywords
-    description_tokens = description.split - STOP_WORDS - NOISE_CHARS
+    description_no_punc = description.gsub(/[^\s\w]/, '').gsub(/_/, '')
+    description_tokens = description_no_punc.split - STOP_WORDS
     words = business.categories + description_tokens
-    words.collect { |w| w.downcase.stem }.uniq
+    words.map! { |w| w.downcase.stem }.uniq!
+    permutations = words.permutation(2).to_a
+    permutations.map! { |perm| perm.join('-') }
+    permutations + words
   end
   
   def name

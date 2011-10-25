@@ -25,13 +25,14 @@ class Business
   
   def to_json
     {
-      :name         => name,
-      :street       => street,
-      :city         => city,
-      :state        => state,
-      :zip          => zip.to_i,
-      :phone        => phone,
-      :categories   => categories
+      :name           => name,
+      :nomalized_name => name.sub(/\/biz\//, ''),
+      :street         => street,
+      :city           => city,
+      :state          => state,
+      :zip            => zip.to_i,
+      :phone          => phone,
+      :categories     => categories
     }
   end
 end
