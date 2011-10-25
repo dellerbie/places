@@ -24,7 +24,7 @@ module Places
       end
       
       def db
-        @db ||= Mongo::Connection.new.db('places')
+        @db ||= Mongo::Connection.new.db('places_development')
       end
       
       def collection

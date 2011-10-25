@@ -6,6 +6,7 @@ class Image
   attr_accessor :url, :description, :business_url, :file_name, :thumb_size, :large_size, :business
   
   STOP_WORDS = YAML::load_file(File.join(PLACES_ROOT, 'config', 'stopwords.yml'))
+  NOISE_CHARS = %w(! ' " # $ % & ( ) * + . / \ : < > = ? @ [ ] ~ ` ; { } | _ - ^ ,)
   
   def business_folder
     business_url.sub(/\/biz\//, '')
@@ -35,9 +36,9 @@ class Image
   end
   
   def keywords
-    description_tokens = description.split - STOP_WORDS
+    description_tokens = description.split - STOP_WORDS - NOISE_CHARS
     words = business.categories + description_tokens
-    words.collect { |w| w.downcase.stem }.uniq!
+    words.collect { |w| w.downcase.stem }.uniq
   end
   
   def name
