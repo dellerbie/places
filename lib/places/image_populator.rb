@@ -20,6 +20,7 @@ module Places
         end
         _collection.create_index('keywords')
         _collection.create_index('business.name')
+        _collection.create_index('random')
       end
       
       def load_images_from_yaml

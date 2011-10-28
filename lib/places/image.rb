@@ -35,7 +35,8 @@ class Image
       :large_height => lg_size[1],
       :thumb_width  => thm_size[0],
       :thumb_height => thm_size[1],
-      :business => business.to_json
+      :business     => business.to_json,
+      :random       => rand
     }
   end
   
