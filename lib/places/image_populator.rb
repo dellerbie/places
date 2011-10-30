@@ -19,7 +19,7 @@ module Places
           _collection.insert(image.to_json)
         end
         _collection.create_index('keywords')
-        _collection.create_index('business.name')
+        _collection.create_index('business.nomalized_name')
         _collection.create_index('random')
       end
       

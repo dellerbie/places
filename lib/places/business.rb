@@ -1,7 +1,6 @@
 class Business 
-  include Comparable
 
-  attr_accessor :name, :street, :city, :state, :zip, :url, :phone, :categories
+  attr_accessor :name, :street, :city, :state, :zip, :url, :phone, :categories, :yelp_id
 
   def hash
     url.hash
@@ -15,10 +14,6 @@ class Business
     url == other.url
   end
 
-  def <=>(other)
-    url <=> other.url
-  end
-
   def page_name
     "#{url.sub(/\/biz\//, '')}.html"
   end
@@ -26,7 +21,8 @@ class Business
   def to_json
     {
       :name           => name,
-      :nomalized_name => name.sub(/\/biz\//, ''),
+      :nomalized_name => url.sub(/\/biz\//, ''),
+      :yelp_id        => yelp_id,
       :street         => street,
       :city           => city,
       :state          => state,

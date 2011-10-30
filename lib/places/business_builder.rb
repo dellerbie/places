@@ -9,16 +9,20 @@ module Places
 
     class << self
       def download_business_image_pages
-        load_businesses.each do |business|
+        businesses = load_businesses
+        businesses.each do |business|
           image_page = File.join(PLACES_ROOT, 'pages', 'images', business.page_name)
           unless File.exists?(image_page)
             image_anchor = business_images_url(business)
             if(image_anchor)
               sleep rand(3) + 1
               images_page = parse_images_url(image_anchor)
+              business.yelp_id = parse_yelp_id_from_url(images_page)
+              modified = true
               download_and_save_images_page(images_page, business)
             end
           end
+          save_businesses(businesses) if modified
         end
       end
       
@@ -27,6 +31,10 @@ module Places
         html = open(file).read
         doc = Nokogiri::HTML(html)
         doc.css('#bizPhotos tr td:nth-child(2) a').first
+      end
+      
+      def parse_yelp_id_from_url(url) 
+        url.sub(/\/biz_photos\//, '')
       end
       
       def parse_images_url(node)
@@ -115,7 +123,7 @@ module Places
       end
       
       def save_businesses(businesses)
-        File.open(BUSINESSES_YAML, "w") { |out| YAML::dump(businesses.uniq!, out) }
+        File.open(BUSINESSES_YAML, "w") { |out| YAML::dump(businesses.uniq! || businesses, out) }
         businesses
       end
     end

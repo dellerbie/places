@@ -27,6 +27,7 @@ class Image
   def to_json
     lg_size = parse_width_and_height(large_size)
     thm_size = parse_width_and_height(thumb_size)
+    yelp_id = url.sub(/.*.bphoto./, '').sub(/...jpg/, '')
     {
       :name         => name,
       :description  => description,
@@ -36,7 +37,8 @@ class Image
       :thumb_width  => thm_size[0],
       :thumb_height => thm_size[1],
       :business     => business.to_json,
-      :random       => rand
+      :random       => rand, 
+      :attribution  => "http://www.yelp.com/biz_photos/#{business.yelp_id}?select=#{yelp_id}"
     }
   end
   
