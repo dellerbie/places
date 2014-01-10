@@ -22,7 +22,12 @@ module Places
       end
       
       def load_images_with_businesses
-        YAML::load_file(IMAGES_BUSINESSES_YAML)
+        if File.exists?(IMAGES_BUSINESSES_YAML)
+          YAML::load_file(IMAGES_BUSINESSES_YAML)
+        else
+          add_businesses_to_images
+          YAML::load_file(IMAGES_BUSINESSES_YAML)
+        end
       end
       
       def load_resized_images
