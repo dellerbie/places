@@ -5,8 +5,8 @@ require 'fileutils'
 
 module Places
   class ImageResizer
-    SMALL_IMAGE_SIZE = '100x100'
-    LARGE_IMAGE_SIZE = '240x240'
+    SMALL_IMAGE_SIZE = '150x150'
+    LARGE_IMAGE_SIZE = '612x612'
     RESIZED_IMAGES_YAML = File.join(PLACES_ROOT, 'seeds', 'images_resized.yml')
     IMAGES_BUSINESSES_YAML = File.join(PLACES_ROOT, 'seeds', 'images_with_businesses.yml')
     

@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'nokogiri'
+gem 'fast-stemmer'
+gem 'mongo'
+gem 'json'
+gem 'aws-sdk'
+gem 'rmagick'
+gem 'rails'
+gem 'i18n'
