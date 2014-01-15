@@ -6,7 +6,7 @@ require 'mongo'
 module Places
   class ImagePopulator
     @db = nil
-    IMAGES_COLLECTION = 'images'
+    IMAGES_COLLECTION = 'la_images'
     
     class << self
       def populate!
