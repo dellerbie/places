@@ -2,6 +2,7 @@ require 'rubygems'
 require 'yaml'
 require 'RMagick'
 require 'fileutils'
+require 'ruby-progressbar'
 
 module Places
   class ImageResizer
@@ -12,8 +13,7 @@ module Places
     
     class << self
       def add_businesses_to_images
-        return load_images_with_businesses if File.exists?(IMAGES_BUSINESSES_YAML)
-        images = load_resized_images
+        images = add_image_dimensions_to_yaml
         FileUtils.cp(RESIZED_IMAGES_YAML, IMAGES_BUSINESSES_YAML)
         businesses = businesses_to_hash
         images.each {|image| image.business = businesses[image.business_url]}
@@ -26,7 +26,6 @@ module Places
           YAML::load_file(IMAGES_BUSINESSES_YAML)
         else
           add_businesses_to_images
-          YAML::load_file(IMAGES_BUSINESSES_YAML)
         end
       end
       
@@ -46,7 +45,9 @@ module Places
       def add_image_dimensions_to_yaml
         return load_resized_images if File.exists?(RESIZED_IMAGES_YAML)
         images = copy_images_yaml
-        images.each do |image| 
+        progress_bar = ProgressBar.create(:title => "Image Dimensions", :starting_at => 0, :total => images.length)
+        images.each do |image|
+          progress_bar.increment
           begin
             set_image_dimensions(image)
           rescue Exception => e
@@ -83,7 +84,11 @@ module Places
       
       def resize_images
         images = Places::ImageBuilder.load_images
-        images.each {|img| resize_image(img) }
+        progress_bar = ProgressBar.create(:title => "Resizing Images", :starting_at => 0, :total => images.length)
+        images.each do |img|
+          progress_bar.increment
+          resize_image(img)
+        end
       end
       
       def resize_image(image)

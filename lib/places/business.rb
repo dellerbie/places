@@ -21,8 +21,7 @@ class Business
   def to_json
     {
       :name           => name,
-      :nomalized_name => url.sub(/\/biz\//, ''),
-      :yelp_id        => yelp_id,
+      :normalized_name => url.sub(/\/biz\//, ''),
       :street         => street,
       :city           => city,
       :state          => state,

@@ -6,9 +6,11 @@ require 'mongo'
 module Places
   class ImagePopulator
     @db = nil
-    IMAGES_COLLECTION = 'images'
+    IMAGES_COLLECTION = 'la_images'
     
     class << self
+      include Mongo
+      
       def populate!
         images = load_images_from_yaml
         _collection = collection
@@ -19,7 +21,7 @@ module Places
           _collection.insert(image.to_json)
         end
         _collection.create_index('keywords')
-        _collection.create_index('business.nomalized_name')
+        _collection.create_index('business.normalized_name')
         _collection.create_index('random')
       end
       
@@ -28,12 +30,12 @@ module Places
       end
       
       def db
-        @db ||= Mongo::Connection.new.db('places_development')
+        @db ||= MongoClient.new().db("places_development")
       end
       
       def collection
         _db = db
-        _db[Places::ImagePopulator::IMAGES_COLLECTION]
+        _db.collection(Places::ImagePopulator::IMAGES_COLLECTION)
       end
     end
   end

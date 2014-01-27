@@ -32,6 +32,8 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bson (1.9.2)
+    bson_ext (1.9.2)
+      bson (~> 1.9.2)
     builder (3.1.4)
     erubis (2.7.0)
     fast-stemmer (1.0.2)
@@ -68,6 +70,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
     rmagick (2.13.2)
+    ruby-progressbar (1.4.1)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -92,6 +95,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
+  bson_ext
   fast-stemmer
   i18n
   json
@@ -99,3 +103,4 @@ DEPENDENCIES
   nokogiri
   rails
   rmagick
+  ruby-progressbar

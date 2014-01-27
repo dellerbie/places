@@ -37,8 +37,7 @@ class Image
       :thumb_width  => thm_size[0],
       :thumb_height => thm_size[1],
       :business     => business.to_json,
-      :random       => rand, 
-      :attribution  => "http://www.yelp.com/biz_photos/#{business.yelp_id}?select=#{yelp_id}"
+      :random       => rand
     }
   end
   
