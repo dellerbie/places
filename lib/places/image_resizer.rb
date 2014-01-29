@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'yaml'
-# require 'RMagick'
+require 'RMagick'
 require 'fileutils'
 require 'ruby-progressbar'
 
