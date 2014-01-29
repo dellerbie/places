@@ -19,7 +19,7 @@ module Places
           FileUtils.mkdir(business_image_folder) unless File.exists?(business_image_folder)
           out = File.join(business_image_folder, image.file_name)
           unless File.exists?(out) 
-            #sleep rand(3) + 1
+            sleep rand(3) + 1
             puts "#{image.description} @ #{image.url}"
             open(out, 'wb') { |file| file << open(image.url).read }
           end
@@ -51,9 +51,9 @@ module Places
       def parse_business_images_from_page(page, business)
         images = []
         doc = Nokogiri::HTML(page)
-        doc.css('.photos .photo .caption p:nth-child(2)').each do |description_node| 
+        doc.css('.photos-index td.photos .photo .caption p:nth-child(2)').each do |description_node| 
           image = Image.new
-          image.description = description_node.text.strip
+          image.description = description_node.text.strip # should get the image description from the img alt attribute, it has more text
           img_node = description_node.parent.parent.css('img').first
           image.url = img_node['src'].sub(/\/ms.jpg/, '/l.jpg')
           image.business_url = business.url

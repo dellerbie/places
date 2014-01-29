@@ -76,7 +76,7 @@ module Places
         html = File.read(File.join(PLACES_ROOT, 'pages', 'top40', category + '.html'))
         doc = Nokogiri::HTML(html)
         businesses = []
-        doc.css('.businessresult').each { |node| 
+        doc.css('.search-results li').each { |node| 
           b = Business.new
           b.name = parse_name node
           b.url = parse_url node
@@ -93,11 +93,11 @@ module Places
       end
       
       def parse_name(node)
-        node.css('h4').text.sub(/\d+\./, '').strip
+        node.css('h3').text.sub(/\d+\./, '').strip
       end
 
       def parse_url(node) 
-        node.css('h4 a').first['href']
+        node.css('h3 a.biz-name').first['href']
       end
 
       def parse_address(node)
@@ -113,12 +113,12 @@ module Places
       end
 
       def parse_phone(node) 
-        node.css('address .phone').text.strip
+        node.css('.biz-phone').text.strip
       end
 
       def parse_categories(node)
         categories = []
-        node.css('.itemcategories a').each { |cat| categories << cat.text }
+        node.css('.category-str-list a').each { |cat| categories << cat.text }
         categories
       end
       
