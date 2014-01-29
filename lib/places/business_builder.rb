@@ -2,6 +2,7 @@ require 'rubygems'
 require 'yaml'
 require 'nokogiri'
 require 'open-uri'
+require 'ruby-progressbar'
 
 module Places
   class BusinessBuilder
@@ -10,7 +11,9 @@ module Places
     class << self
       def download_business_image_pages
         businesses = load_businesses
+        progress_bar = ProgressBar.create(:title => "Downloading Business Image Pages", :starting_at => 0, :total => businesses.length)
         businesses.each do |business|
+          progress_bar.increment
           image_page = File.join(PLACES_ROOT, 'pages', 'images', business.page_name)
           unless File.exists?(image_page)
             image_anchor = business_images_url(business)
@@ -49,7 +52,10 @@ module Places
       end
       
       def download_business_pages
+        businesses = load_businesses
+        progress_bar = ProgressBar.create(:title => "Downloading Business Pages", :starting_at => 0, :total => businesses.length)
         load_businesses.each do |business|
+          progress_bar.increment
           file = File.join(PLACES_ROOT, 'pages', 'businesses', business.page_name)
           unless File.exists?(file)
             sleep rand(3) + 1
@@ -68,7 +74,12 @@ module Places
         return load_businesses if File.exists?(BUSINESSES_YAML)
         businesses = []
         categories = YAML::load_file(File.join(PLACES_ROOT, 'seeds', 'categories.yml'))
-        categories.each { |cat| businesses.concat(businesses_in_category(cat)) }
+        progress_bar = ProgressBar.create(:title => "Businesses.yml", :starting_at => 0, :total => categories.length)
+        
+        categories.each do |cat| 
+          progress_bar.increment
+          businesses.concat(businesses_in_category(cat))
+        end
         save_businesses(businesses)
       end
       

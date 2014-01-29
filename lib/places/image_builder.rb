@@ -5,6 +5,7 @@ require 'open-uri'
 require 'fileutils'
 require 'digest/sha1'
 require 'places/image'
+require 'ruby-progressbar'
 
 module Places
   class ImageBuilder
@@ -13,14 +14,14 @@ module Places
     class << self
       def download_images_from_yaml
         images = YAML::load_file(IMAGES_YAML)
-        puts "\nDownloading images..."
+        progress_bar = ProgressBar.create(:title => "Downloading Images", :starting_at => 0, :total => images.length)
         images.each do |image|
+          progress_bar.increment
           business_image_folder = File.join(PLACES_ROOT, 'images', image.business_folder)
           FileUtils.mkdir(business_image_folder) unless File.exists?(business_image_folder)
           out = File.join(business_image_folder, image.file_name)
           unless File.exists?(out) 
             sleep rand(3) + 1
-            puts "#{image.description} @ #{image.url}"
             open(out, 'wb') { |file| file << open(image.url).read }
           end
         end
@@ -29,7 +30,10 @@ module Places
       def write_images_to_yaml
         return load_images if File.exists?(IMAGES_YAML)
         images = []
-        Places::BusinessBuilder.load_businesses.each do |business|
+        businesses = Places::BusinessBuilder.load_businesses
+        progress_bar = ProgressBar.create(:title => "Images.yml", :starting_at => 0, :total => businesses.length)
+        businesses.each do |business|
+          progress_bar.increment
           img_page = business_image_page(business)
           next unless File.exists?(img_page)
           html = open(img_page).read

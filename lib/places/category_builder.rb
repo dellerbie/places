@@ -2,6 +2,7 @@ require 'rubygems'
 require 'yaml'
 require 'nokogiri'
 require 'open-uri'
+require 'ruby-progressbar'
 
 module Places
   class CategoryBuilder
@@ -36,7 +37,9 @@ module Places
       
       def download_and_save_top_40_restaurants_by_category_pages
         categories = YAML::load_file(write_categories_to_yaml)
+        progress_bar = ProgressBar.create(:title => "Downloading top40 pages", :starting_at => 0, :total => categories.length)
         categories.each do |category|
+          progress_bar.increment
           file = File.join(PLACES_ROOT, 'pages', 'top40', category + '.html')
           unless File.exists?(file)
             url = BUSINESS_CATEGORY_URL.sub(/@@@/, category)
